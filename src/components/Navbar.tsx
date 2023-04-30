@@ -1,27 +1,36 @@
+import { Github, Linkedin, SunMoon } from "lucide-react";
+
 type ElementProps = {
-  name: string;
-  link: string;
+  name: any;
+  link?: string;
+  className?: string;
 };
 
-const NavElement = ({ name, link }: ElementProps) => {
+const NavElement = ({ name, link, className }: ElementProps) => {
   return (
-    <li>
-      <a className="hover:text-slate-600" href={link}>
-        {name}
-      </a>
-    </li>
+    <a className={`${className} hover:text-slate-600`} href={link}>
+      {name}
+    </a>
   );
 };
 
 const Navbar = () => {
   return (
     <nav className="py-6 px-6 text-xl">
-      <ul className="flex gap-5">
-        <NavElement name="Home" link="" />
-        <NavElement name="About me" link="" />
-        <NavElement name="Projects" link="" />
-        <NavElement name="Blogs" link="" />
-      </ul>
+      <div className="flex gap-5">
+        <NavElement name="Home" link="/" />
+        <NavElement name={<SunMoon />} />
+        <NavElement
+          name={<Linkedin />}
+          link="https://www.linkedin.com/in/hachem-betrouni/"
+          className="justify-end"
+        />
+        <NavElement
+          name={<Github />}
+          link="https://github.com/1hachem"
+          className="justify-end"
+        />
+      </div>
     </nav>
   );
 };
