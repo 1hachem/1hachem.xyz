@@ -7,10 +7,10 @@ type BlockProps = {
   className?: string;
 };
 
-const Block = ({ name, content, link }: BlockProps) => {
+const Block = ({ name, content, link, className }: BlockProps) => {
   return (
-    <a href={link}>
-      <div className="relative py-6 px-9 min-h-[35vh] rounded-3xl">
+    <a href={link} className={`${className} hover:scale-105 rounded-3xl`}>
+      <div className="relative py-6 px-9 min-h-[35vh]">
         <ArrowUpRight className="absolute top-2 right-2" />
         <h1 className="text-5xl">{name}</h1>
         <br />
