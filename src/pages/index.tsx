@@ -2,8 +2,8 @@ import Block from "@/components/Block";
 
 export default function Grid() {
   return (
-    <>
-      <div className="p-10 grid grid-cols-4 gap-x-8 gap-y-5">
+    <div>
+      <div className="p-10 grid grid-cols-5 gap-x-8 gap-y-5">
         {/* bg-[url('../../public/images/1.jpg')] bg-contain bg-no-repeat bg-right-bottom > */}
         <Block
           name="About me"
@@ -32,7 +32,14 @@ export default function Grid() {
           link="contact"
           className="bg-green-300 col-span-1"
         />
+
+        <Block
+          name="How can I help you ?"
+          content="my services, pricing, reviews and more !"
+          link=""
+          className="bg-yellow-200 col-span-2"
+        />
       </div>
-    </>
+    </div>
   );
 }
