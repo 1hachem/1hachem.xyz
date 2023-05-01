@@ -5,17 +5,26 @@ const sound = "/sounds/hover.mp3";
 
 type BlockProps = {
   name: string;
-  content: string;
-  link: string;
+  date?: string;
+  description?: string;
+  link?: string;
   className?: string;
+  dummy?: boolean;
 };
 
-const Block = ({ name, content, link, className }: BlockProps) => {
-  const [play] = useSound(sound);
+const Block = ({
+  name,
+  date,
+  description,
+  link,
+  className,
+  dummy,
+}: BlockProps) => {
+  const [play] = useSound(sound, { volume: 0.25 });
   return (
     <a
       href={link}
-      className={`${className} hover:scale-105 rounded-3xl`}
+      className={`${className} hover:scale-105 rounded-3xl bg-opacity-50 dark:bg-opacity-70 backdrop-blur-3xl dark:backdrop-blur-3xl`}
       onMouseEnter={() => {
         play();
       }}
@@ -24,7 +33,8 @@ const Block = ({ name, content, link, className }: BlockProps) => {
         <ArrowUpRight className="absolute top-2 right-2" />
         <h1 className="text-5xl">{name}</h1>
         <br />
-        <p className="text-2xl max-w-[50%]">{content}</p>
+        <p className="text-2xl">{description}</p>
+        <p className="text-xl absolute right-5 bottom-5">{date}</p>
       </div>
     </a>
   );
