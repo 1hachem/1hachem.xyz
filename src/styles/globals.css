@@ -18,6 +18,15 @@
 
 @layer base {
   body {
-    @apply dark:bg-black bg-white;
+    @apply dark:bg-zinc-900 opacity-90;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
   }
 }
