@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <p className="text-center text-sm "> Hachem Betrouni 2022-2023</p>;
+  return <p className="text-center text-sm">© 2023-2024 Hachem Betrouni</p>;
 };
 
 export default Footer;
