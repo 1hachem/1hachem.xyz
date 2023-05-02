@@ -24,7 +24,7 @@ const Block = ({
   return (
     <a
       href={link}
-      className={`${className} hover:scale-105 rounded-3xl bg-opacity-50 dark:bg-opacity-70 backdrop-blur-3xl dark:backdrop-blur-3xl`}
+      className={`${className} col-span-1 row-span-1 hover:scale-105 rounded-3xl bg-opacity-50 dark:bg-opacity-70 backdrop-blur-3xl dark:backdrop-blur-3xl`}
       onClick={() => {
         play();
       }}
