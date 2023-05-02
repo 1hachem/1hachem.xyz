@@ -18,7 +18,7 @@
 
 @layer base {
   body {
-    @apply dark:bg-zinc-900 opacity-90;
+    @apply dark:bg-stone-800 opacity-90;
   }
 }
 

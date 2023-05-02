@@ -12,6 +12,7 @@ const ThemeToggle = () => {
 
   return (
     <SunMoon
+      className="hover:text-slate-600"
       onClick={() => {
         theme == "dark" ? setTheme("light") : setTheme("dark");
         play();
