@@ -6,7 +6,7 @@ export default function Grid() {
         name="About me"
         description="Salam alaykum 👋 
         my name is Hachem Betrouni 
-        I am a tech-generalist who loves reading and solving complex problems. 
+        I am a tech-generalist who loves reading books and solving complex problems. 
         welcome to my online space ✨"
         link="about"
         className="bg-zinc-900 dark:bg-zinc-200 text-white dark:text-black row-span-2 col-span-2"
