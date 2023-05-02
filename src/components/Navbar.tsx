@@ -1,4 +1,5 @@
 import { Github, Linkedin, SunMoon, Home } from "lucide-react";
+import GoBack from "./GoBack";
 import ThemeToggle from "./ThemeToggle";
 import NavElement from "./NavElement";
 
@@ -9,6 +10,7 @@ const Navbar = () => {
         <div className="flex gap-5">
           <NavElement name={<Home />} link="/" />
           <ThemeToggle />
+          <GoBack />
         </div>
         <div className="flex gap-5">
           <NavElement
