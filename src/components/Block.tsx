@@ -10,17 +10,9 @@ type BlockProps = {
   description?: string;
   link?: string;
   className?: string;
-  dummy?: boolean;
 };
 
-const Block = ({
-  name,
-  date,
-  description,
-  link,
-  className,
-  dummy,
-}: BlockProps) => {
+const Block = ({ name, date, description, link, className }: BlockProps) => {
   const [play] = useSound(sound, { volume: 0.25 });
   return (
     <motion.div
@@ -29,12 +21,12 @@ const Block = ({
       }}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
-      transition={{
-        duration: 0.1,
-        delay: 0.1,
+      transition={{ duration: 0.2 }}
+      whileHover={{
+        scale: [1, 1.05],
+        transition: { duration: 0.1 },
       }}
-      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       className={`${className} col-span-1 row-span-1 rounded-3xl bg-opacity-50 dark:bg-opacity-70 backdrop-blur-3xl dark:backdrop-blur-3xl`}
     >
       <a href={link}>
