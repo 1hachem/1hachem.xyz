@@ -11,7 +11,7 @@ const components = {
 
 interface LayoutProps {
   children: React.ReactNode;
-  meta: { author: string; title: string; slug: string; topics: string[] };
+  meta: { author: string; title: string; slug: string };
 }
 
 const Layout = ({ children, meta }: LayoutProps) => {
