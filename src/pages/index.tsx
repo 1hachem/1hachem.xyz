@@ -1,7 +1,8 @@
 import Block from "@/components/Block";
+import { motion } from "framer-motion";
 export default function Grid() {
   return (
-    <div className="p-5 grid grid-cols-1 md:grid-cols-5  gap-x-8 gap-y-5">
+    <motion.div className="p-5 grid grid-cols-1 md:grid-cols-5  gap-x-8 gap-y-5">
       <Block
         name="About me"
         description="Salam alaykum 👋 
@@ -39,6 +40,6 @@ export default function Grid() {
         link=""
         className="bg-yellow-300 dark:bg-teal-400 md:col-span-2"
       />
-    </div>
+    </motion.div>
   );
 }
