@@ -22,11 +22,13 @@ const Layout = ({ children, meta }: LayoutProps) => {
         <meta name="description" content={meta.title} />
       </Head>
       <div className="w-[90%] mx-auto p-4 bg-zinc-50 bg-opacity-20 bg-blur-3xl rounded-xl">
-        <h1 className="text-4xl font-bold">{meta.title}</h1>
+        <h1 className="text-5xl">{meta.title}</h1>
         <h2 className="text-3xl">{meta.slug}</h2>
         <br />
-        <p className="text-md">pen : {meta.author}</p>
+        <p className="text-md">by {meta.author}</p>
+        <br />
         {children}
+        <br />
       </div>
     </MDXProvider>
   );
