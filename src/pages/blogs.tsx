@@ -13,7 +13,7 @@ export default function Blogs() {
         name="Definitive guide"
         description="for wining freelance bids"
         date="12/12/2023"
-        link="/blogs/freelance"
+        link="/blogs/empty"
         className="bg-purple-300 dark:bg-purple-900"
       />
       <Block
