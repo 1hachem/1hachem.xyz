@@ -10,7 +10,6 @@ export const authOptions = {
       //@ts-ignore
       clientSecret: process.env.GITHUB_SECRET,
     }),
-    // ...add more providers here
   ],
 };
 export default NextAuth(authOptions);
