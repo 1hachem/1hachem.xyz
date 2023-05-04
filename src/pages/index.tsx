@@ -4,13 +4,17 @@ export default function Grid() {
   return (
     <motion.div className="p-5 grid grid-cols-1 md:grid-cols-5  gap-x-8 gap-y-5">
       <Block
+        name="welcome to hachem.xyz"
+        description="more than a portfilio, this is my internet presence !"
+        link=""
+        dummy={true}
+        className="opacity-0 dark:text-white text-black md:col-span-5"
+      />
+      <Block
         name="About me"
-        description="Salam alaykum 👋 
-        my name is Hachem Betrouni 
-        I am a tech-generalist who loves reading books and solving complex problems. 
-        welcome to my online space ✨"
+        description="I am Hachem Betrouni a tech-generalist who loves reading books and solving complex problems."
         link="content/about"
-        className="bg-zinc-900 dark:bg-zinc-200 text-white dark:text-black md:row-span-2 md:col-span-2"
+        className="bg-zinc-600 dark:bg-white text-white dark:text-black md:row-span-2 md:col-span-2"
       />
 
       <Block
@@ -31,14 +35,14 @@ export default function Grid() {
         name="Get in touch"
         description=""
         link="contact"
-        className="bg-green-300 dark:bg-green-400"
+        className="bg-green-300 dark:bg-green-800 "
       />
 
       <Block
         name="Learn more"
         description="about how I can help you, pricing and business ideas !"
         link=""
-        className="bg-yellow-300 dark:bg-teal-400 md:col-span-2"
+        className="bg-yellow-300 dark:bg-yellow-500 md:col-span-2"
       />
     </motion.div>
   );
