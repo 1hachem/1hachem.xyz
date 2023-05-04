@@ -9,16 +9,21 @@ const Navbar = () => {
     <nav className="py-6 px-6 text-xl">
       <div className="flex justify-between">
         <div className="flex gap-5">
-          <NavElement name={<Home />} link="/" />
+          <NavElement name="Home" icon={<Home />} link="/" />
           <ThemeToggle />
           <GoBack />
         </div>
         <div className="flex gap-5">
           <NavElement
-            name={<Linkedin />}
+            name="my linkedin"
+            icon={<Linkedin />}
             link="https://www.linkedin.com/in/hachem-betrouni/"
           />
-          <NavElement name={<Github />} link="https://github.com/1hachem" />
+          <NavElement
+            name="my github"
+            icon={<Github />}
+            link="https://github.com/1hachem"
+          />
           <Profile />
         </div>
       </div>

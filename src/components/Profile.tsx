@@ -14,9 +14,10 @@ export default function Profile() {
   return (
     <button
       onClick={() => signIn()}
+      data-te-toggle="tooltip"
+      title="sign-in"
       className="flex gap-2 text-black dark:text-white hover:text-yellow-400 dark:hover:text-yellow-400"
     >
-      <div>sign in</div>
       <Key />
     </button>
   );
