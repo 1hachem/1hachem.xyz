@@ -6,7 +6,7 @@ export default function Profile() {
   if (session?.user) {
     return (
       <>
-        Signed in as {session.user.email} <br />
+        <img src={session.user.image} className="w-10 h-10 rounded-full" />
         <button onClick={() => signOut()}>Sign out</button>
       </>
     );
