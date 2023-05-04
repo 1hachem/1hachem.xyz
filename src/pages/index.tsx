@@ -9,7 +9,7 @@ export default function Grid() {
         my name is Hachem Betrouni 
         I am a tech-generalist who loves reading books and solving complex problems. 
         welcome to my online space ✨"
-        link="about"
+        link="content/about"
         className="bg-zinc-900 dark:bg-zinc-200 text-white dark:text-black md:row-span-2 md:col-span-2"
       />
 
