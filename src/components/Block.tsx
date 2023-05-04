@@ -30,7 +30,7 @@ const Block = ({ name, date, description, link, className }: BlockProps) => {
       className={`${className} col-span-1 row-span-1 rounded-3xl bg-opacity-50 dark:bg-opacity-70 backdrop-blur-3xl dark:backdrop-blur-3xl`}
     >
       <a href={link}>
-        <div className="relative py-6 px-9 min-h-[35vh]">
+        <div className="relative py-6 px-9 min-h-[25vh]">
           <ArrowUpRight className="absolute top-2 right-2" />
           <h1 className="text-5xl">{name}</h1>
           <br />
