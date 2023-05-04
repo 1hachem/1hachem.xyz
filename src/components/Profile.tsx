@@ -6,7 +6,11 @@ export default function Profile() {
   if (session?.user) {
     return (
       <>
-        <img src={session.user.image} className="w-10 h-10 rounded-full" />
+        <img
+          // src={session.user.image}
+          alt="profile picture"
+          className="w-10 h-10 rounded-full"
+        />
         <button onClick={() => signOut()}>Sign out</button>
       </>
     );
