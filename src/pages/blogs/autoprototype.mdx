@@ -6,4 +6,27 @@ export const meta = {
   slug: "democratizing AI assets with automatic prototyping",
 };
 
+## Motivation
+
+Recent success of Large Language Models (LLMs) made many startups, corporations` and individuals aware of AI's
+potential to automate many of their daunting tasks.
+
+We aim to democratize the use of AI systems by providing an end-to-end AI asset automatically.
+
+We propose a system design that leverages the unprecedented availability of open-source AI models (Huggingface, Github ..)
+to build what we call model bases and we utilize the zero-shot reasoning capabilities of today's LLMs to solve tasks
+such as problem scoping,
+task planning, model selection, and reflecting over proposed prototypes.
+
+Additionally, we use tools like Docker to facilitate ease of reproducibility, integration, and scaling of these prototypes.
+
+## System design
+
+<br />
+![system image](/images/automatic_prototype/system.svg)
+<br />
+## References
+
+[HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face](https://arxiv.org/pdf/2303.17580.pdf)
+
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
