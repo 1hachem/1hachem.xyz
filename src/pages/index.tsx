@@ -9,7 +9,7 @@ export default function Grid() {
         description="more than a portfolio, this is my internet presence !"
         link=""
         dummy={true}
-        className="dark:text-white text-black md:col-span-5"
+        className="dark:text-white text-black md:col-span-5 border-dotted"
       />
       <Block
         name="About me"
@@ -34,7 +34,7 @@ export default function Grid() {
 
       <Block
         name="Get in touch"
-        description=""
+        description="not on phone though, I never owned one."
         link=""
         className="bg-green-300 dark:bg-green-800 "
       />
