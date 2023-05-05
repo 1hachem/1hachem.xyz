@@ -1,18 +1,18 @@
-import { Key } from "lucide-react";
+import { Key, Lock } from "lucide-react";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Profile() {
   const { data: session } = useSession();
   if (session?.user) {
     return (
-      <>
-        <img
-          // src={session.user.image}
-          alt="profile picture"
-          className="w-10 h-10 rounded-full"
-        />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
+      <button
+        onClick={() => signOut()}
+        data-te-toggle="tooltip"
+        title={`signed in as ${session.user.email} click to sign out`}
+        className="text-black dark:text-white hover:text-yellow-400 dark:hover:text-yellow-400"
+      >
+        <Lock />
+      </button>
     );
   }
   return (
@@ -20,7 +20,7 @@ export default function Profile() {
       onClick={() => signIn()}
       data-te-toggle="tooltip"
       title="sign-in"
-      className="flex gap-2 text-black dark:text-white hover:text-yellow-400 dark:hover:text-yellow-400"
+      className=" text-black dark:text-white hover:text-yellow-400 dark:hover:text-yellow-400"
     >
       <Key />
     </button>
