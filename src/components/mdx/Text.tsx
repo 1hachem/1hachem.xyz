@@ -33,6 +33,17 @@ const Text = {
       </motion.div>
     );
   },
+  li: ({ children }: any) => {
+    return (
+      <motion.li
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="list-disc text-xl mx-4"
+      >
+        {children}
+      </motion.li>
+    );
+  },
 };
 
 export default Text;

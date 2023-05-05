@@ -8,6 +8,7 @@ const components = {
   h2: Heading.H2,
   p: Text.p,
   a: Text.a,
+  li: Text.li,
 };
 
 interface LayoutProps {
