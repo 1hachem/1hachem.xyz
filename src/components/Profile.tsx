@@ -16,18 +16,24 @@ export default function Profile() {
         >
           <Lock />
         </button>
-        <img src={image!} className="rounded-full w-6 h-6" />
+        <img
+          src={image!}
+          className="rounded-full w-6 h-6 border-2 border-black dark:border-white"
+        />
       </>
     );
   }
   return (
-    <button
-      onClick={() => signIn()}
-      data-te-toggle="tooltip"
-      title="sign-in"
-      className=" text-black dark:text-white hover:text-yellow-400 dark:hover:text-yellow-400"
-    >
-      <Key />
-    </button>
+    <>
+      <button
+        onClick={() => signIn()}
+        data-te-toggle="tooltip"
+        title="sign-in"
+        className=" text-black dark:text-white hover:text-yellow-400 dark:hover:text-yellow-400"
+      >
+        <Key />
+      </button>
+      <div className="rounded-full w-6 h-6 border-2 border-black dark:border-white"></div>
+    </>
   );
 }
