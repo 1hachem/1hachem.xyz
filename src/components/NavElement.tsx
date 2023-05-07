@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type ElementProps = {
   name: string;
   icon: any;
@@ -7,14 +9,14 @@ type ElementProps = {
 
 const NavElement = ({ name, icon, link, className }: ElementProps) => {
   return (
-    <a
+    <Link
       className={`${className} hover:text-slate-600`}
-      href={link}
+      href={link!}
       data-te-toggle="tooltip"
       title={name}
     >
       {icon}
-    </a>
+    </Link>
   );
 };
 

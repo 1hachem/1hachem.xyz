@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import useSound from "use-sound";
+import Link from "next/link";
 
 const sound = "/sounds/hover.mp3";
 
@@ -56,10 +57,10 @@ const Block = ({
         whileTap={{ scale: 0.95 }}
         className={`${className} col-span-1 row-span-1 rounded-3xl backdrop-blur-3xl dark:backdrop-blur-3xl border-2 border-black dark:border-white`}
       >
-        <a href={link}>
+        <Link href={link!}>
           <ArrowUpRight className="absolute top-2 right-2" />
           <BlockText name={name} description={description} date={date} />
-        </a>
+        </Link>
       </motion.div>
     );
   }
