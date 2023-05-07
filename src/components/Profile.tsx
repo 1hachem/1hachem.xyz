@@ -1,4 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Key, Lock } from "lucide-react";
@@ -6,6 +7,7 @@ import { Key, Lock } from "lucide-react";
 export default function Profile() {
   const { data: session } = useSession();
   const [shown, setShown] = useState(false);
+  const router = useRouter();
 
   const showMenu = {
     enter: {
@@ -36,13 +38,13 @@ export default function Profile() {
         variants={showMenu}
         initial="exit"
         animate={shown ? "enter" : "exit"}
-        className="absolute bg-white dark:bg-black mt-1 border-2 border-black dark:border-white rounded-2xl p-2 hover:text-yellow-400"
+        className="absolute bg-white dark:bg-black mt-1 border-2 border-black dark:border-white rounded-2xl p-2 "
       >
         <motion.li
           onClick={() => {
-            session?.user ? signOut() : signIn();
+            session?.user ? signOut() : router.push("/signin");
           }}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-yellow-400"
         >
           {session?.user ? (
             <div className="flex gap-1">
