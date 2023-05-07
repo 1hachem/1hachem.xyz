@@ -1,4 +1,4 @@
-import { Github, Linkedin, SunMoon, Home } from "lucide-react";
+import { Github, Linkedin, Home } from "lucide-react";
 import GoBack from "./GoBack";
 import ThemeToggle from "./ThemeToggle";
 import NavElement from "./NavElement";
