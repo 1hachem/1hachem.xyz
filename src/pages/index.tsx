@@ -37,7 +37,7 @@ export default function Grid() {
       <Block
         name="Learn more"
         description="about how I can help you, pricing and business ideas !"
-        link=""
+        link="content/learnmore"
         className="bg-yellow-300 dark:text-black md:col-span-2"
       />
     </motion.div>

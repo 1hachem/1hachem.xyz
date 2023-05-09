@@ -1,0 +1,74 @@
+import Layout from "@/components/Layouts/BlogLayout";
+import Offer from "@/components/Offer";
+
+export const meta = {
+  title: "Learn more",
+  slug: "services I provide and their respective pricing",
+  topics: ["learn more", "services", "pricing", "contact"],
+};
+
+# Pricing
+
+<br />
+
+<div className="p-5 grid grid-cols-1 md:grid-cols-3  gap-x-8 gap-y-5">
+  <Offer
+    name="AI consulting"
+    description="Discuss your AI ideas with me, I will let you know what can be done and how ! 
+    state-of-the-art, a detailed market research, proposed system-design, and more !"
+    price="40$/hr"
+    className="bg-yellow-300 text-black md:col-span-1"
+  />
+  <Offer
+    name="End-to-end AI applications"
+    description="I will understand your problem, design an AI solution, implement it, 
+    build a user interface for it, deploy it and let you judge the quality of my work !"
+    price="3k$ for a prototype"
+    className="bg-green-300 text-black md:col-span-1"
+  />
+  <Offer
+    name="Collaboration"
+    description="Need a hand building a digital product ? 
+    I can help you with that !"
+    price="contact me !"
+    className="bg-purple-300 text-black md:col-span-1"
+  />
+</div>
+
+# AI consulting
+
+- State-of-the-art: what are the best and most recent models and technologies
+  relevant for a use-case.
+
+- Detailed Market Research: competitors, relevant trends and opportunities.
+
+- Proposed System-Design: I will deliver a detailed architecture AI solution.
+  The system design will include the technologies to be used, the implementation process, and the expected results/challenges.
+
+- Evaluation of Feasibility: I will provide feedback to you client on any potential issues or limitations.
+
+- Technical Support.
+
+- Confidentiality maintained : no information is disclosed to third parties without your consent.
+
+# End-to-end AI applications
+
+- Problem understanding: I will conduct a holistic understanding and scoping of the use-case. This will include discussions with you
+  to scope the problems and set the requirements and success conditions.
+
+- domain understanding : my diverse background allows me to understand a wide range of domains, physics, biology, electronics and more ...
+
+- AI solution design: I will make sure you will understand every aspect of the solution.
+
+- Fast implementation: takes from few days up to few weeks depending on the complexity of the problem,
+  with multiple validations conducted with you, superior code quality, with good practices, clear documentation and no vendor-locking.
+
+- Comes with a polished UI.
+
+- I will handle the deployment of your application.
+
+# Collaboration
+
+Got a brilliant idea ? pitch it to me ! I am always looking forward to sail on new adventures !
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>;

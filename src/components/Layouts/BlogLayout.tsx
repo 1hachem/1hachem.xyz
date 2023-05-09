@@ -25,9 +25,17 @@ const Layout = ({ children, meta }: LayoutProps) => {
       </Head>
       <div className="w-[90%] mx-auto p-2">
         <h1 className="text-5xl py-4">{meta.title}</h1>
-        <h2 className="text-3xl">{meta.slug}</h2>
-        <br />
-        <p className="text-md">by {meta.author}</p>
+        {meta.slug ? (
+          <>
+            <h2 className="text-3xl">{meta.slug}</h2> <br />
+          </>
+        ) : null}
+
+        {meta.author ? (
+          <>
+            <p className="text-md">by {meta.author}</p>{" "}
+          </>
+        ) : null}
         <br />
         <br />
         {children}
