@@ -12,7 +12,6 @@ export default function Blogs() {
       {/* <Block
         name="automatic prototyping"
         description="blog for indabaX algeria 2023 poster"
-        date="05/05/2023"
         link="/blogs/autoprototype"
         className="bg-slate-400 text-white "
       /> */}

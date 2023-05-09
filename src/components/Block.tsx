@@ -12,7 +12,7 @@ type BlockProps = {
   className?: string;
 };
 
-const BlockText = ({ name, description, date }: BlockProps) => {
+const BlockText = ({ name, description }: BlockProps) => {
   return (
     <div className="relative py-6 px-9 min-h-[25vh]">
       <h1 className="text-5xl">{name}</h1>
