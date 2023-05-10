@@ -23,7 +23,7 @@ const Layout = ({ children, meta }: LayoutProps) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.title} />
       </Head>
-      <div className="w-[90%] mx-auto p-2">
+      <div className="w-[90%] mx-auto p-2 select-text">
         <h1 className="text-5xl py-4">{meta.title}</h1>
         {meta.slug ? (
           <>
