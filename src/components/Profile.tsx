@@ -12,7 +12,7 @@ export default function Profile() {
       <DropdownMenu.Trigger asChild>
         <motion.img
           src={session?.user ? session.user.image! : "/images/frog.png"}
-          className="rounded-full w-7 h-7 border-2 cursor-pointer"
+          className="rounded-full w-10 h-10 border-2 cursor-pointer"
         />
       </DropdownMenu.Trigger>
 
