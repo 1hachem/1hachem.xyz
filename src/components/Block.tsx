@@ -23,7 +23,7 @@ const BlockText = ({ name, description }: BlockProps) => {
 };
 
 const Block = ({ name, description, link, className }: BlockProps) => {
-  const [play] = useSound(sound, { volume: 0.25 });
+  const [play] = useSound(sound, { volume: 0.5 });
 
   return (
     <motion.div
