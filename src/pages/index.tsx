@@ -30,7 +30,7 @@ export default function Grid() {
       <Block
         name="Get in touch"
         description="not on phone though, I never owned one."
-        link=""
+        link="content/contact"
         className="bg-green-300 dark:text-black"
       />
 
