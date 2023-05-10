@@ -7,10 +7,12 @@ type BlockProps = {
 
 const BlockText = ({ name, description, price }: BlockProps) => {
   return (
-    <div className="relative py-6 px-9">
-      <h1 className="text-5xl">{name}</h1>
-      <br />
-      <p className="text-2xl">{description}</p>
+    <div className="relative py-6 px-9 flex flex-col justify-between h-full">
+      <div>
+        <h1 className="md:text-5xl text-4xl">{name}</h1>
+        <br />
+        <p className="text-2xl">{description}</p>
+      </div>
       <p className="text-3xl py-10">{price}</p>
     </div>
   );
