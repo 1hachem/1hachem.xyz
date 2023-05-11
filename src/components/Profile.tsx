@@ -19,7 +19,7 @@ export default function Profile() {
       <DropdownMenu.Portal>
         <DropdownMenu.Content className="bg-white dark:bg-black dark:border-white border-black border-2 rounded-lg p-2 m-5">
           <DropdownMenu.Item
-            className="hover:text-yellow-500 px-1 outline-none cursor-pointer"
+            className="hover:text-yellow-500 px-1 outline-none cursor-pointer font-stora"
             onSelect={
               session?.user
                 ? () => {

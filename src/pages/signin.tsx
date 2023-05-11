@@ -10,7 +10,7 @@ export default function SignIn({
   providers,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <div className="flex h-[60vh]">
+    <div className="flex h-[60vh] font-stora">
       <div className="m-auto border-black dark:border-white border-2 rounded-xl p-6">
         {Object.values(providers).map((provider) => (
           <div key={provider.name}>

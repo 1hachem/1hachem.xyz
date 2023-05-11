@@ -21,3 +21,8 @@
     @apply dark:bg-black;
   }
 }
+
+@font-face {
+  font-family: "stora";
+  src: url(/fonts/Stora.woff2) format("woff2");
+}
