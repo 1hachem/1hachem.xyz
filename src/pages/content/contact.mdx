@@ -1,6 +1,7 @@
 import Layout from "@/components/Layouts/BlogLayout";
 import Offer from "@/components/Offer";
 import Block from "@/components/Block";
+import Copy from "@/components/Copy";
 
 export const meta = {
   title: "Get in touch",
@@ -31,9 +32,10 @@ export const meta = {
   />
   <Offer
     name="Discord"
-    description="My tag is : Hachem#7888"
+    description={<Copy text="my tag is Hachem#7888" />}
     className="bg-zinc-300 text-black md:col-span-1"
   />
+
   <Block
     name="Twitter"
     description="I don't tweet much but I am always there ... lurking"

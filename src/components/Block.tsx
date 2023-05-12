@@ -7,7 +7,7 @@ const sound = "/sounds/hover.mp3";
 
 type BlockProps = {
   name: string;
-  description?: string;
+  description?: any;
   link?: string;
   position?: string;
   className?: string;
