@@ -23,14 +23,14 @@ const Text = {
   },
   a: ({ children, href }: any) => {
     return (
-      <motion.div
+      <motion.span
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         whileHover={PulseAnimation}
         className="text-xl text-sky-700 dark:text-sky-300 hover:underline"
       >
         <a href={href}>{children}</a>
-      </motion.div>
+      </motion.span>
     );
   },
   li: ({ children }: any) => {

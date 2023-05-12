@@ -10,7 +10,7 @@ export default function SignIn({
   providers,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <div className="flex h-[60vh] font-stora">
+    <div className="flex h-[60vh]">
       <div className="m-auto border-black dark:border-white border-2 rounded-xl p-6">
         {Object.values(providers).map((provider) => (
           <div key={provider.name}>
@@ -18,7 +18,7 @@ export default function SignIn({
               className="text-2xl p-2 hover:text-slate-400"
               onClick={() => signIn(provider.id)}
             >
-              login with {provider.name}
+              login with <span className="font-stora">{provider.name}</span>
             </button>
           </div>
         ))}
