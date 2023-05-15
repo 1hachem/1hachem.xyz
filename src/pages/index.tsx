@@ -25,7 +25,7 @@ export default function Grid() {
       <Block
         name="Blogs"
         description="click here Mom !"
-        link="content/blogs"
+        link="/blogs"
         position=""
         className="bg-purple-300 dark:text-black"
       />
