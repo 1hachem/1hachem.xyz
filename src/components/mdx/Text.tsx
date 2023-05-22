@@ -12,25 +12,26 @@ const PulseAnimation = {
 const Text = {
   p: ({ children }: any) => {
     return (
-      <motion.div
+      <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         className="my-4 text-xl"
       >
         {children}
-      </motion.div>
+      </motion.p>
     );
   },
   a: ({ children, href }: any) => {
     return (
-      <motion.span
+      <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         whileHover={PulseAnimation}
         className="text-xl text-sky-700 dark:text-sky-300 hover:underline"
+        href={href}
       >
-        <a href={href}>{children}</a>
-      </motion.span>
+        {children}
+      </motion.a>
     );
   },
   li: ({ children }: any) => {

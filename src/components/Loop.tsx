@@ -2,27 +2,14 @@ import { motion } from "framer-motion";
 
 const Loop = () => {
   return (
-    <motion.div
-      className="relative py-6 px-9 min-h-[25vh] col-span-1 md:col-span-5 font-stora"
+    <motion.h1
+      className="relative py-6 px-9 min-h-[25vh] col-span-1 md:col-span-5 md:text-8xl text-4xl "
       whileTap={{ scale: 0.9 }}
-      whileHover={{ scale: 0.9 }}
     >
-      <motion.h1
-        className="text-4xl md:text-8xl"
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 0.8 }}
-      >
-        Welcome to hachem.xyz
-      </motion.h1>
-      <motion.h2
-        className="text-xl md:text-5xl"
-        whileTap={{ scale: 0.8 }}
-        whileHover={{ scale: 0.8 }}
-      >
-        more than a portfolio this is my online space.
-      </motion.h2>
+      Welcome to my personal <span className="line-through">website</span>
       <br />
-    </motion.div>
+      <span className="text-blue-300">online space.</span>
+    </motion.h1>
   );
 };
 

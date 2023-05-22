@@ -16,7 +16,7 @@ type BlockProps = {
 const BlockText = ({ name, description }: BlockProps) => {
   return (
     <div className="relative py-6 px-6 min-h-[25vh]">
-      <h1 className="text-5xl font-stora breka-all">{name}</h1>
+      <h1 className="text-5xl">{name}</h1>
       <br />
       <p className="text-2xl">{description}</p>
     </div>

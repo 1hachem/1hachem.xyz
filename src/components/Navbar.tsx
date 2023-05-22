@@ -14,16 +14,6 @@ const Navbar = () => {
           <GoBack />
         </div>
         <div className="flex gap-5">
-          {/* <NavElement
-            name="my linkedin"
-            icon={<Linkedin />}
-            link="https://www.linkedin.com/in/hachem-betrouni/"
-          />
-          <NavElement
-            name="my github"
-            icon={<Github />}
-            link="https://github.com/1hachem"
-          /> */}
           <Profile />
         </div>
       </div>

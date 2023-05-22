@@ -1,5 +1,5 @@
 import { useTheme } from "next-themes";
-import { SunMoon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import useSound from "use-sound";
 
 const sound = "/sounds/switch.mp3";
@@ -10,15 +10,27 @@ const ThemeToggle = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  return (
-    <SunMoon
-      className="hover:text-slate-600"
-      onClick={() => {
-        theme == "dark" ? setTheme("light") : setTheme("dark");
-        play();
-      }}
-    />
-  );
+  if (theme == "dark") {
+    return (
+      <Sun
+        className="hover:text-slate-200"
+        onClick={() => {
+          setTheme("light");
+          play();
+        }}
+      />
+    );
+  } else {
+    return (
+      <Moon
+        className="hover:text-slate-600"
+        onClick={() => {
+          setTheme("dark");
+          play();
+        }}
+      />
+    );
+  }
 };
 
 export default ThemeToggle;

@@ -8,11 +8,7 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {
-      fontFamily: {
-        stora: ["stora"],
-      },
-    },
+    extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
 };

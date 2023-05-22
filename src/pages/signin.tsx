@@ -18,7 +18,7 @@ export default function SignIn({
               className="text-2xl p-2 hover:text-slate-400"
               onClick={() => signIn(provider.id)}
             >
-              login with <span className="font-stora">{provider.name}</span>
+              login with <span>{provider.name}</span>
             </button>
           </div>
         ))}
