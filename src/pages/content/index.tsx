@@ -21,20 +21,22 @@ export default function Blogs({
     title: string;
     description: string;
     className: string;
-    hide: boolean;
+    publish: boolean;
   }[];
 }) {
   return (
     <div className="p-5 grid md:grid-cols-3 gap-x-8 gap-y-5 ">
       {blogsMeta.map((meta, index) =>
-        meta.hide ? null : (
+        meta.publish ? (
           <Block
             key={meta.title}
             name={meta.title}
             description={meta.description}
             link={`content/${slugs[index]}`}
-            className={meta.className}
+            className="bg-blue-300 dark:bg-gray-500"
           />
+        ) : (
+          <></>
         )
       )}
     </div>

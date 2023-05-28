@@ -2,7 +2,7 @@ import { getBlogBySlug, getBlogs } from "@/utils/getBlogs";
 import { GetStaticPropsContext } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Layout from "@/components/Layouts/BlogLayout";
+import Layout from "@/components/layouts/BlogLayout";
 import Heading from "@/components/mdx/Heading";
 import Text from "@/components/mdx/Text";
 import Block from "@/components/Block";
@@ -37,7 +37,6 @@ export default function Blog({ meta, content }: BlogProps) {
 
 export const getStaticPaths = () => {
   const blogs = getBlogs();
-  console.log(blogs);
   return {
     paths: blogs.map((slug) => ({ params: { slug } })),
     fallback: false,

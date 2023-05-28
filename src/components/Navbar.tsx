@@ -13,9 +13,7 @@ const Navbar = () => {
           <ThemeToggle />
           <GoBack />
         </div>
-        <div className="flex gap-5">
-          <Profile />
-        </div>
+        <div className="flex gap-5">{/* <Profile /> */}</div>
       </div>
     </nav>
   );

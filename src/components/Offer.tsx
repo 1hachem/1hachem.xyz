@@ -1,6 +1,6 @@
 type BlockProps = {
   name: string;
-  description?: string;
+  description?: any;
   price?: string;
   className?: string;
 };
