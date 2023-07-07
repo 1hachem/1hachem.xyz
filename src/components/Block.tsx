@@ -33,7 +33,7 @@ const Block = ({
   const [play] = useSound(sound, { volume: 0.5 });
 
   return (
-    <Link href={link!} className={`${position} col-span-1 row-span-1`}>
+    <Link href={link!} className={`${position} relative col-span-1 row-span-1`}>
       <motion.div
         onClick={() => {
           play();
@@ -46,7 +46,7 @@ const Block = ({
           transition: { duration: 0.1 },
         }}
         whileTap={{ scale: 0.95 }}
-        className={`${className} h-full rounded-3xl backdrop-blur-3xl dark:backdrop-blur-3xl border-2 border-black dark:border-white`}
+        className={`${className} h-full rounded-3xl border-2 border-black dark:border-white`}
       >
         <ArrowUpRight className="bg-white text-black dark:bg-black dark:text-white border-black dark:border-white border-2 w-10 h-8 rounded-xl absolute bottom-2 right-2" />
         <BlockText name={name} description={description} />

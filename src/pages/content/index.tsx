@@ -33,7 +33,7 @@ export default function Blogs({
             name={meta.title}
             description={meta.description}
             link={`content/${slugs[index]}`}
-            className="bg-blue-300 dark:bg-gray-500"
+            className={meta.className}
           />
         ) : (
           <></>
