@@ -2,7 +2,12 @@ import Head from "next/head";
 
 interface LayoutProps {
   children: React.ReactNode;
-  meta: { author: string; title: string; description: string };
+  meta: {
+    author: string;
+    title: string;
+    description: string;
+    image_url?: string;
+  };
 }
 
 const Layout = ({ children, meta }: LayoutProps) => {
@@ -12,6 +17,7 @@ const Layout = ({ children, meta }: LayoutProps) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="author" content={meta.author} />
+        <meta name="og:image" content={meta.image_url} />
       </Head>
       <div className="w-[90%] mx-auto p-2 select-text">
         <h1 className="text-5xl py-4">{meta.title}</h1>
