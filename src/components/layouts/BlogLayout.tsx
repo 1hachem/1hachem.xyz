@@ -17,6 +17,10 @@ const Layout = ({ children, meta }: LayoutProps) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="author" content={meta.author} />
+        <meta name="title" content={meta.title} />
+
+        <meta name="og:title" content={meta.title} />
+        <meta name="og:description" content={meta.description} />
         <meta name="og:image" content={meta.image_url} />
       </Head>
       <div className="w-[90%] mx-auto p-2 select-text">
