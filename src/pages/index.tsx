@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function Grid() {
   return (
     <motion.div className="p-5 grid grid-cols-1 md:grid-cols-5 gap-x-8 gap-y-5">
-      <Loop />
       <Block
         name="About me"
         description="I am Hachem Betrouni a tech-generalist who loves reading books and solving complex problems."
@@ -15,24 +14,24 @@ export default function Grid() {
       />
 
       <Block
-        name="Projects"
-        description="cool projects I am working on"
-        link=""
-        position="md:col-span-2"
-        className="bg-gray-300 dark:text-black"
-      />
-
-      <Block
         name="Blogs"
         description="click here Mom !"
         link="content"
-        position=""
+        position="md:col-span-2"
         className="bg-purple-300 dark:text-black"
       />
 
       <Block
+        name="Reading list"
+        description="Books I read, am reading or I will read"
+        link="content/readinglist"
+        position=""
+        className="bg-gray-300 dark:text-black"
+      />
+
+      <Block
         name="Get in touch"
-        description="not on phone though, I never owned one."
+        description=""
         link="/contact"
         position=""
         className="bg-green-300 dark:text-black"
