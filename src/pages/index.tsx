@@ -7,7 +7,7 @@ export default function Grid() {
     <motion.div className="p-5 grid grid-cols-1 md:grid-cols-5 gap-x-8 gap-y-5">
       <Block
         name="About me"
-        description="I am Hachem Betrouni a tech-generalist who loves reading books and solving complex problems."
+        description="I am Hachem Betrouni an AI engineer and hobbyist mycologist. I am into reading books and solving complex problems."
         link="content/about"
         position="md:row-span-2 md:col-span-2"
         className="bg-black text-white"
@@ -38,8 +38,8 @@ export default function Grid() {
       />
 
       <Block
-        name="Learn more"
-        description="about how I can help you, pricing and business ideas !"
+        name="Freelance"
+        description="learn more about how I can help you !"
         link="content/learnmore"
         position="md:col-span-2"
         className="bg-yellow-300 dark:text-black"
