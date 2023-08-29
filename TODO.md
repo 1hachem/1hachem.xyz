@@ -1,0 +1,9 @@
+- [ ] add reviews to learn more page
+- [ ] add projects :
+  - Scrib.ai
+  - Hyko.ai
+  - wisetip,xyz
+  - QA benchmark
+  - Mutagan
+- [ ] separate blogs from content
+- [ ] work on SEO
