@@ -1,6 +1,5 @@
 import Block from "@/components/Block";
 import Head from "next/head";
-import { motion } from "framer-motion";
 
 export default function Grid() {
   return (
@@ -17,7 +16,7 @@ export default function Grid() {
           content="welcome to hachem.xyz, my personal website !"
         />
       </Head>
-      <motion.div className="p-5 grid grid-cols-1 md:grid-cols-5 gap-x-8 gap-y-5">
+      <div className="flex-grow p-5 grid md:grid-rows-3 grid-cols-1 md:grid-cols-5 gap-x-8 gap-y-5">
         <Block
           name="About me"
           description="I am Hachem Betrouni an AI engineer and hobbyist mycologist. I am into reading books and solving complex problems."
@@ -32,14 +31,6 @@ export default function Grid() {
           link="content"
           position="md:col-span-2"
           className="bg-purple-300 dark:text-black"
-        />
-
-        <Block
-          name="Reading list"
-          description="Books I read, am reading or I will read"
-          link="content/readinglist"
-          position=""
-          className="bg-gray-300 dark:text-black"
         />
 
         <Block
@@ -65,7 +56,7 @@ export default function Grid() {
           position="md:col-span-1"
           className="bg-orange-300 dark:text-black"
         />
-      </motion.div>
+      </div>
     </>
   );
 }
