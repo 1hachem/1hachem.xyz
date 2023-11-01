@@ -1,8 +1,7 @@
-import { Github, Linkedin, Home } from "lucide-react";
+import { Home } from "lucide-react";
 import GoBack from "./GoBack";
-import ThemeToggle from "./ThemeToggle";
 import NavElement from "./NavElement";
-import Profile from "./Profile";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   return (
@@ -13,7 +12,6 @@ const Navbar = () => {
           <ThemeToggle />
           <GoBack />
         </div>
-        <div className="flex gap-5">{/* <Profile /> */}</div>
       </div>
     </nav>
   );
