@@ -1,22 +1,22 @@
 import Block from "@/components/Block";
-import { getBlogsWithMeta } from "@/utils/getBlogs";
+import { getContentWithMeta } from "@/utils/getContent";
 
 export const getStaticProps = () => {
-  const { slugs, blogsMeta } = getBlogsWithMeta();
+  const { slugs, contentMeta } = getContentWithMeta();
   return {
     props: {
       slugs,
-      blogsMeta,
+      contentMeta,
     },
   };
 };
 
-export default function Blogs({
+export default function Content({
   slugs,
-  blogsMeta,
+  contentMeta,
 }: {
   slugs: string[];
-  blogsMeta: {
+  contentMeta: {
     author: string;
     title: string;
     description: string;
@@ -26,7 +26,7 @@ export default function Blogs({
 }) {
   return (
     <div className="p-5 grid md:grid-cols-3 gap-x-8 gap-y-5 ">
-      {blogsMeta.map((meta, index) =>
+      {contentMeta.map((meta, index) =>
         meta.publish ? (
           <Block
             key={meta.title}

@@ -10,7 +10,7 @@ interface LayoutProps {
   };
 }
 
-const Layout = ({ children, meta }: LayoutProps) => {
+const ContentLayout = ({ children, meta }: LayoutProps) => {
   return (
     <>
       <Head>
@@ -42,4 +42,4 @@ const Layout = ({ children, meta }: LayoutProps) => {
   );
 };
 
-export default Layout;
+export default ContentLayout;

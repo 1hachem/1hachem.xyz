@@ -1,17 +1,17 @@
-import BlogLayout from "@/components/layouts/BlogLayout";
-import Offer from "@/components/Offer";
 import Block from "@/components/Block";
 import Copy from "@/components/Copy";
+import Offer from "@/components/Offer";
+import ContentLayout from "@/components/layouts/ContentLayout";
 
 const meta = {
-  author: "",
+  author: "Hachem Betrouni",
   title: "Get in touch",
-  description: "",
+  description: "my contacts",
 };
 
 const contact = () => {
   return (
-    <BlogLayout meta={meta}>
+    <ContentLayout meta={meta}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-5">
         <Block
           name="Email"
@@ -44,7 +44,7 @@ const contact = () => {
           link="https://twitter.com/HachemBetrouni"
         />
       </div>
-    </BlogLayout>
+    </ContentLayout>
   );
 };
 

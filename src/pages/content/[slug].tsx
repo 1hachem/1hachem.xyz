@@ -1,13 +1,13 @@
-import { getBlogBySlug, getBlogs } from "@/utils/getBlogs";
+import Block from "@/components/Block";
+import Copy from "@/components/Copy";
+import Offer from "@/components/Offer";
+import Layout from "@/components/layouts/ContentLayout";
+import Heading from "@/components/mdx/Heading";
+import Text from "@/components/mdx/Text";
+import { getContent, getContentBySlug } from "@/utils/getContent";
 import { GetStaticPropsContext } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Layout from "@/components/layouts/BlogLayout";
-import Heading from "@/components/mdx/Heading";
-import Text from "@/components/mdx/Text";
-import Block from "@/components/Block";
-import Offer from "@/components/Offer";
-import Copy from "@/components/Copy";
 
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 
@@ -22,12 +22,12 @@ const components = {
   Copy: Copy,
 };
 
-interface BlogProps {
+interface ContentProps {
   meta: { author: string; title: string; description: string };
   content: MDXRemoteSerializeResult;
 }
 
-export default function Blog({ meta, content }: BlogProps) {
+export default function Content({ meta, content }: ContentProps) {
   return (
     <Layout meta={meta}>
       <MDXRemote {...content} components={components} />
@@ -36,16 +36,16 @@ export default function Blog({ meta, content }: BlogProps) {
 }
 
 export const getStaticPaths = () => {
-  const blogs = getBlogs();
+  const content = getContent();
   return {
-    paths: blogs.map((slug) => ({ params: { slug } })),
+    paths: content.map((slug) => ({ params: { slug } })),
     fallback: false,
   };
 };
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
   const slug = ctx.params?.slug;
-  const { meta, content } = getBlogBySlug(slug as string);
+  const { meta, content } = getContentBySlug(slug as string);
   return {
     props: {
       meta,
