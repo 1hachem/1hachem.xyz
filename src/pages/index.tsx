@@ -48,14 +48,6 @@ export default function Grid() {
           position="md:col-span-2"
           className="bg-yellow-300 dark:text-black"
         />
-
-        <Block
-          name="Projects"
-          description="under construction 🚧"
-          link=""
-          position="md:col-span-1"
-          className="bg-orange-300 dark:text-black"
-        />
       </div>
     </>
   );
