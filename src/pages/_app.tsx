@@ -15,7 +15,7 @@ export default function App({
       <ThemeProvider attribute="class">
         <div className="flex flex-col min-h-screen select-none">
           <Navbar />
-          <div className="bg-red-50 flex-col flex-grow">
+          <div className="flex-col flex-grow">
             <Component {...pageProps} />
           </div>
           <Footer />
