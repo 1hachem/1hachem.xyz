@@ -1,7 +1,0 @@
-- [ ] add projects :
-  - Scrib.ai
-  - Hyko.ai
-  - wisetip.xyz
-  - QA benchmark
-  - Mutagan
-- [ ] work on SEO
