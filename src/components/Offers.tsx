@@ -45,7 +45,7 @@ export default function Offers() {
         <CardContent>
           <Button asChild>
             <Link href="https://github.com/BIGmama-technology/Hiring-software-engineer-backend">
-              May the allah be with you 🍀
+              May allah be with you 🍀
             </Link>
           </Button>
         </CardContent>
