@@ -1,6 +1,6 @@
 import { ArrowBigLeftDash } from "lucide-react";
-import useSound from "use-sound";
 import { useRouter } from "next/router";
+import useSound from "use-sound";
 
 const sound = "/sounds/hover.mp3";
 
@@ -10,7 +10,7 @@ const GoBack = () => {
 
   return (
     <ArrowBigLeftDash
-      className="hover:hover:text-slate-600"
+      className="hover:hover:text-slate-600 hidden lg:block"
       onClick={() => {
         router.back();
         play();
