@@ -7,15 +7,15 @@ export default function Grid() {
   return (
     <>
       <Head>
-        <title>Hachem Betrouni</title>
+        <title>1hachem</title>
         <meta
           name="description"
-          content="welcome to hachem.xyz, my personal space !"
+          content="welcome to 1hachem.xyz, my online space !"
         />
         <meta name="og:title" content="Hachem Betrouni" />
         <meta
           name="og:description"
-          content="welcome to hachem.xyz, my personal website !"
+          content="welcome to 2hachem.xyz, my online space !"
         />
       </Head>
       <div className="grid gap-y-10">

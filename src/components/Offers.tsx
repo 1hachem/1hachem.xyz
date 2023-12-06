@@ -19,7 +19,7 @@ export default function Offers() {
         <CardContent>
           <Button asChild>
             <Link href="https://github.com/BIGmama-technology/Hiring-AI-engineer">
-              Flex your muscles 💪🏽
+              Break a leg 🩼
             </Link>
           </Button>
         </CardContent>
@@ -31,8 +31,8 @@ export default function Offers() {
         </CardHeader>
         <CardContent>
           <Button asChild>
-            <Link href="https://github.com/BIGmama-technology/Hiring-AI-engineer">
-              Show your talent ✨
+            <Link href="https://github.com/BIGmama-technology/Hiring-software-engineer-frontend">
+              Shine princess ✨
             </Link>
           </Button>
         </CardContent>
@@ -44,8 +44,8 @@ export default function Offers() {
         </CardHeader>
         <CardContent>
           <Button asChild>
-            <Link href="https://github.com/BIGmama-technology/Hiring-AI-engineer">
-              Challange yourself 🚀
+            <Link href="https://github.com/BIGmama-technology/Hiring-software-engineer-backend">
+              May the odds be in your favor 🍀
             </Link>
           </Button>
         </CardContent>
