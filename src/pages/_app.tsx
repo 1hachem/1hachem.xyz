@@ -12,15 +12,13 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
-      <ThemeProvider attribute="class">
-        <div className="flex flex-col min-h-screen select-none">
-          <Navbar />
-          <div className="flex-col flex-grow">
-            <Component {...pageProps} />
-          </div>
-          <Footer />
-        </div>
-        <Analytics />
-      </ThemeProvider>
+    <ThemeProvider attribute="class">
+      <div className="flex flex-col select-none antialiased max-w-4xl mx-4 mt-4 lg:mx-auto">
+        <Navbar />
+        <Component {...pageProps} />
+      </div>
+      <Footer />
+      <Analytics />
+    </ThemeProvider>
   );
 }

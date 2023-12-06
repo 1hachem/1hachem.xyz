@@ -1,5 +1,7 @@
-import Block from "@/components/Block";
+import Offers from "@/components/Offers";
+import { Button } from "@/components/ui/button";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Grid() {
   return (
@@ -16,38 +18,38 @@ export default function Grid() {
           content="welcome to hachem.xyz, my personal website !"
         />
       </Head>
-      <div className="flex-grow p-5 grid md:grid-rows-3 grid-cols-1 md:grid-cols-5 gap-x-8 gap-y-5">
-        <Block
-          name="About me"
-          description="I am Hachem Betrouni an AI engineer and hobbyist mycologist. I am into reading books and solving complex problems."
-          link="content/about"
-          position="md:row-span-2 md:col-span-2"
-          className="bg-black text-white"
-        />
-
-        <Block
-          name="Blogs"
-          description="click here Mom !"
-          link="content"
-          position="md:col-span-2"
-          className="bg-purple-300 dark:text-black"
-        />
-
-        <Block
-          name="Get in touch"
-          description=""
-          link="/contact"
-          position=""
-          className="bg-green-300 dark:text-black"
-        />
-
-        <Block
-          name="Freelance"
-          description="learn more about how I can help you !"
-          link="content/learnmore"
-          position="md:col-span-2"
-          className="bg-yellow-300 dark:text-black"
-        />
+      <div className="grid gap-y-10">
+        <div className="text-3xl px-10 py-10">
+          As-salamu alaykum 👋🏽, I am Hachem Betrouni and I stand with 🇵🇸
+        </div>
+        <div className="text-xl">
+          I am currently working as CTO and AI engineer at BIGmama technology in
+          Algeria, we are building useful AI tools : @Hyko and @Yourscrib, and
+          we are always looking for special humans and talented engineers to
+          join our mission in showing excellence from Africa to ourselves and to
+          the world.
+        </div>
+        <h1 className="text-3xl">Hiring</h1>
+        <Offers />
+        <h1 className="text-3xl">About me</h1>
+        <div className="text-xl py-1">
+          CTO or AI engineer are not who I am. Let me properly introduce my self
+          again. My real name is Abduallah, I am a seeker of wisedom, I live and
+          travel in order to comprehand the divine words god put in his book;
+          the quran. I am a husband, a reader, and an amature mycologist, I want
+          to become a farmer, a biologist, and a mathematician.
+        </div>
+        <Button className="w-1/2 place-self-center" asChild>
+          <Link href="/content/about">Learn more</Link>
+        </Button>
+        <h1 className="text-3xl">Blogs</h1>
+        <div className="text-xl py-1">
+          I write about ideas, thoughts, and findings. I also sometimes write
+          about my projects.
+        </div>
+        <Button className="w-1/2 place-self-center" asChild>
+          <Link href="/content/">Find them here</Link>
+        </Button>
       </div>
     </>
   );
