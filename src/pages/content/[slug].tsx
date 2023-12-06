@@ -1,6 +1,4 @@
 import Block from "@/components/Block";
-import Copy from "@/components/Copy";
-import Offer from "@/components/Offer";
 import Layout from "@/components/layouts/ContentLayout";
 import Heading from "@/components/mdx/Heading";
 import Text from "@/components/mdx/Text";
@@ -18,8 +16,6 @@ const components = {
   a: Text.a,
   li: Text.li,
   Block: Block,
-  Offer: Offer,
-  Copy: Copy,
 };
 
 interface ContentProps {
