@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 
 export default function Offers() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-2">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-2 gap-y-2">
       <Card>
         <CardHeader>
           <CardTitle>AI engineer</CardTitle>
