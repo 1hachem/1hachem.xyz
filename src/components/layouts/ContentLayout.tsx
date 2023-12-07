@@ -3,7 +3,6 @@ import Head from "next/head";
 interface LayoutProps {
   children: React.ReactNode;
   meta: {
-    author: string;
     title: string;
     description: string;
     image_url?: string;
@@ -16,7 +15,7 @@ const ContentLayout = ({ children, meta }: LayoutProps) => {
       <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <meta name="author" content={meta.author} />
+        <meta name="author" content="Hachem Betrouni" />
         <meta name="title" content={meta.title} />
 
         <meta name="og:title" content={meta.title} />
@@ -31,9 +30,6 @@ const ContentLayout = ({ children, meta }: LayoutProps) => {
             <br />
           </h2>
         ) : null}
-
-        {meta.author ? <p className="text-md">by {meta.author}</p> : null}
-        <br />
         <br />
         {children}
         <br />

@@ -1,9 +1,31 @@
+import Blogs from "@/components/Blogs";
 import Offers from "@/components/Offers";
 import { Button } from "@/components/ui/button";
+import { getContentWithMeta } from "@/utils/getContent";
 import Head from "next/head";
 import Link from "next/link";
 
-export default function Grid() {
+export const getStaticProps = () => {
+  const { slugs, contentMeta } = getContentWithMeta();
+  return {
+    props: {
+      slugs,
+      contentMeta,
+    },
+  };
+};
+
+export default function Grid({
+  slugs,
+  contentMeta,
+}: {
+  slugs: string[];
+  contentMeta: {
+    title: string;
+    description: string;
+    publish: boolean;
+  }[];
+}) {
   return (
     <>
       <Head>
@@ -56,9 +78,7 @@ export default function Grid() {
           I write about ideas, thoughts, and findings. I also sometimes write
           about my projects.
         </div>
-        <Button className="w-1/2 place-self-center" asChild>
-          <Link href="/content/">Find them here</Link>
-        </Button>
+        <Blogs slugs={slugs} contentMeta={contentMeta} />
       </div>
     </>
   );
