@@ -1,5 +1,5 @@
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
 import useSound from "use-sound";
 
 const sound = "/sounds/switch.mp3";
@@ -14,6 +14,7 @@ const ThemeToggle = () => {
     return (
       <Sun
         className="hover:text-slate-200"
+        data-te-toggle="tooltip"
         onClick={() => {
           setTheme("light");
           play();
@@ -24,6 +25,7 @@ const ThemeToggle = () => {
     return (
       <Moon
         className="hover:text-slate-600"
+        data-te-toggle="tooltip"
         onClick={() => {
           setTheme("dark");
           play();

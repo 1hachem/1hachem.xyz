@@ -15,19 +15,28 @@ export default function Grid() {
         <meta name="og:title" content="Hachem Betrouni" />
         <meta
           name="og:description"
-          content="welcome to 2hachem.xyz, my online space !"
+          content="welcome to 1hachem.xyz, my online space !"
         />
       </Head>
       <div className="grid gap-y-10">
-        <div className="text-3xl px-10 py-10">
+        <div className="text-3xl py-10">
           As-salamu alaykum 👋🏽, I am Hachem Betrouni and I stand with 🇵🇸
         </div>
         <div className="text-xl">
           I am currently working as CTO and AI engineer at BIGmama technology in
-          Algeria, we are building useful AI tools : @Hyko and @Yourscrib, and
-          we are always looking for special humans and talented engineers to
-          join our mission in showing excellence from Africa to ourselves and to
-          the world.
+          Algeria, we are building useful AI tools :
+          <a className="text-blue-400 underline" href="https://hyko.ai/">
+            {" "}
+            Hyko
+          </a>{" "}
+          &
+          <a className="text-blue-400 underline" href="https://yourscrib.ai/">
+            {" "}
+            Yourscrib
+          </a>
+          , and we are always looking for special humans and talented engineers
+          to join our mission in showing excellence from Africa to ourselves and
+          to the world.
         </div>
         <h1 className="text-3xl">Hiring</h1>
         <Offers />
