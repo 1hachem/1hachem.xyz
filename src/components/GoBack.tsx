@@ -6,7 +6,7 @@ const GoBack = () => {
 
   return (
     <ArrowBigLeftDash
-      className="hover:hover:text-slate-600 hidden lg:block"
+      className="hover:text-slate-600 hidden lg:block hover:cursor-pointer"
       onClick={() => {
         router.back();
       }}

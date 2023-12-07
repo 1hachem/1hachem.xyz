@@ -13,8 +13,7 @@ const ThemeToggle = () => {
   if (theme == "dark") {
     return (
       <Sun
-        className="hover:text-slate-200"
-        data-te-toggle="tooltip"
+        className="hover:text-slate-200 hover:cursor-pointer"
         onClick={() => {
           setTheme("light");
           play();
@@ -24,7 +23,7 @@ const ThemeToggle = () => {
   } else {
     return (
       <Moon
-        className="hover:text-slate-600"
+        className="hover:text-slate-600 hover:cursor-pointer"
         data-te-toggle="tooltip"
         onClick={() => {
           setTheme("dark");
