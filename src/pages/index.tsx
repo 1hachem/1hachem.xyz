@@ -46,7 +46,7 @@ export default function Grid({
         </div>
         <div className="text-xl">
           I am currently working as CTO and AI engineer at BIGmama technology in
-          Algeria, we are building useful AI tools :
+          Algeria, and we are building useful AI tools that will go brrrrr inchalah
           <a className="text-blue-400 underline" href="https://hyko.ai/">
             {" "}
             Hyko
@@ -56,27 +56,27 @@ export default function Grid({
             {" "}
             Yourscrib
           </a>
-          , and we are always looking for special humans and talented engineers
-          to join our mission in showing excellence from Africa to ourselves and
-          to the world.
+          , and we are always looking for special humans and talented engineers to join our 
+          mission in proving to ourselves "Africans" and to the rest of the world that we can build world class 
+          technology by Africans in Africa. 🌍
         </div>
+        {/* <Figures /> */}
         <h1 className="text-3xl">Hiring</h1>
         <Offers />
         <h1 className="text-3xl">About me</h1>
         <div className="text-xl py-1">
           CTO or AI engineer are not who I am. Let me properly introduce my self
-          again. My real name is Abduallah, I am a seeker of wisedom, I live and
-          travel in order to comprehand the divine words god put in his book;
-          the quran. I am a husband, a reader, and an amature mycologist, I want
+          again. I am muslim, but for me being a muslim is not about wearing certain cloths or practicing certain rituals. 
+          I live and travel in order to comprehand the divine words god put in his book;
+          the quran. I am a husband, a reader, and an amature mycologist, I am learning
           to become a farmer, a biologist, and a mathematician.
         </div>
         <Button className="w-1/2 place-self-center" asChild>
           <Link href="/content/about">Learn more</Link>
         </Button>
-        <h1 className="text-3xl">Blogs</h1>
+        <h1 className="text-3xl">Drafts</h1>
         <div className="text-xl py-1">
-          I write about ideas, thoughts, and findings. I also sometimes write
-          about my projects.
+          Sometime when the moon strikes I write my random thoughts 
         </div>
         <Blogs slugs={slugs} contentMeta={contentMeta} />
       </div>

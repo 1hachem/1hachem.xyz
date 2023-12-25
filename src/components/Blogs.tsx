@@ -23,7 +23,7 @@ export default function Blogs({
       {contentMeta.map((meta, index) =>
         meta.publish ? (
           <Link href={`content/${slugs[index]}`}>
-            <Card className="my-3 hover:scale-105 shadow-md break-inside-avoid-column">
+            <Card className="my-3 hover:bg-slate-100 dark:hover:bg-slate-700 shadow-md break-inside-avoid-column">
               <CardHeader>
                 <CardTitle>{meta.title}</CardTitle>
                 <CardDescription>{meta.description}</CardDescription>
