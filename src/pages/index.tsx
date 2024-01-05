@@ -60,15 +60,14 @@ export default function Grid({
           mission in proving to ourselves "Africans" and to the rest of the world that we can build world class 
           technology by Africans in Africa. 🌍
         </div>
-        {/* <Figures /> */}
         <h1 className="text-3xl">Hiring</h1>
         <Offers />
         <h1 className="text-3xl">About me</h1>
         <div className="text-xl py-1">
           CTO or AI engineer are not who I am. Let me properly introduce my self
           again. I am muslim. I live and travel in order to comprehand the divine words god put in his book;
-          the quran. I am a husband, a reader, and an amature mycologist, I want to learn to become a better farmer, 
-          an experienced biologist, and a thoughtful mathematician.
+          the quran and to practice what I understood. I am a husband, a reader, and an amature mycologist, 
+          I want to learn to become a generalist tech-head, a better farmer, an experienced biologist, and a thoughtful mathematician.
         </div>
         <Button className="w-1/2 place-self-center" asChild>
           <Link href="/content/about">Learn more</Link>
