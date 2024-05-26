@@ -6,10 +6,14 @@ interface LayoutProps {
     title: string;
     description: string;
     image_url?: string;
+    language?: string;
   };
 }
 
 const ContentLayout = ({ children, meta }: LayoutProps) => {
+  // Check if the content language is Arabic
+  const isArabic = meta.language === 'ar';
+
   return (
     <>
       <Head>
@@ -22,7 +26,7 @@ const ContentLayout = ({ children, meta }: LayoutProps) => {
         <meta name="og:description" content={meta.description} />
         <meta name="og:image" content={meta.image_url} />
       </Head>
-      <div className="w-[90%] mx-auto p-2 select-text">
+      <div className={`w-[90%] mx-auto p-2 select-text ${isArabic ? 'text-right' : ''}`}>
         <h1 className="text-5xl py-4">{meta.title}</h1>
         {meta.description ? (
           <h2 className="text-3xl">
