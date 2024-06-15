@@ -24,11 +24,6 @@ const Navbar = () => {
             link="https://www.linkedin.com/in/hachem-betrouni/"
           />
           <NavElement
-            name="twitter"
-            icon={<Twitter />}
-            link="https://twitter.com/HachemBetrouni"
-          />
-          <NavElement
             name="email"
             icon={<Mail />}
             link="mailto:hachem.betrouni@g.enp.edu.dz"
