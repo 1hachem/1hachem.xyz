@@ -1,4 +1,3 @@
-import Block from "@/components/Block";
 import Layout from "@/components/layouts/ContentLayout";
 import Heading from "@/components/mdx/Heading";
 import Text from "@/components/mdx/Text";
@@ -15,7 +14,6 @@ const components = {
   p: Text.p,
   a: Text.a,
   li: Text.li,
-  Block: Block,
 };
 
 interface ContentProps {

@@ -4,13 +4,12 @@ type ElementProps = {
   name: string;
   icon: any;
   link?: string;
-  className?: string;
 };
 
-const NavElement = ({ name, icon, link, className }: ElementProps) => {
+const NavElement = ({ name, icon, link }: ElementProps) => {
   return (
     <Link
-      className={`${className} hover:text-slate-600`}
+      className="hover:text-slate-600"
       href={link!}
       data-te-toggle="tooltip"
       title={name}
