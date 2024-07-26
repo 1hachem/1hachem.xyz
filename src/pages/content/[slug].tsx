@@ -9,41 +9,41 @@ import { serialize } from "next-mdx-remote/serialize";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const components = {
-  h1: Heading.H1,
-  h2: Heading.H2,
-  p: Text.p,
-  a: Text.a,
-  li: Text.li,
+	h1: Heading.H1,
+	h2: Heading.H2,
+	p: Text.p,
+	a: Text.a,
+	li: Text.li,
 };
 
 interface ContentProps {
-  meta: { author: string; title: string; description: string };
-  content: MDXRemoteSerializeResult;
+	meta: { author: string; title: string; description: string };
+	content: MDXRemoteSerializeResult;
 }
 
 export default function Content({ meta, content }: ContentProps) {
-  return (
-    <Layout meta={meta}>
-      <MDXRemote {...content} components={components} />
-    </Layout>
-  );
+	return (
+		<Layout meta={meta}>
+			<MDXRemote {...content} components={components} />
+		</Layout>
+	);
 }
 
 export const getStaticPaths = () => {
-  const content = getContent();
-  return {
-    paths: content.map((slug) => ({ params: { slug } })),
-    fallback: false,
-  };
+	const content = getContent();
+	return {
+		paths: content.map((slug) => ({ params: { slug } })),
+		fallback: false,
+	};
 };
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
-  const slug = ctx.params?.slug;
-  const { meta, content } = getContentBySlug(slug as string);
-  return {
-    props: {
-      meta,
-      content: await serialize(content),
-    },
-  };
+	const slug = ctx.params?.slug;
+	const { meta, content } = getContentBySlug(slug as string);
+	return {
+		props: {
+			meta,
+			content: await serialize(content),
+		},
+	};
 };
