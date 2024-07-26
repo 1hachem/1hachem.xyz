@@ -19,22 +19,28 @@ export default function Blogs({
   }[];
 }) {
   return (
-    <div className="p-5 md:columns-3 gap-x-4">
-      {contentMeta.map((meta, index) =>
-        meta.publish ? (
-          <Link href={`content/${slugs[index]}`}>
-            <Card className="my-3 hover:bg-slate-100 dark:hover:bg-slate-700 shadow-md break-inside-avoid-column">
-              <CardHeader>
-                <CardTitle>{meta.title}</CardTitle>
-                <CardDescription>{meta.description}</CardDescription>
-              </CardHeader>
-              <CardContent></CardContent>
-            </Card>
-          </Link>
-        ) : (
-          <></>
-        )
-      )}
-    </div>
+    <>
+      <h1 className="text-3xl">Drafts</h1>
+      <div className="text-xl py-1">
+        I write about Tech, Lifestyle and Religion
+      </div>
+      <div className="p-5 md:columns-3 gap-x-4">
+        {contentMeta.map((meta, index) =>
+          meta.publish ? (
+            <Link href={`content/${slugs[index]}`}>
+              <Card className="my-3 hover:bg-slate-100 dark:hover:bg-slate-700 shadow-md break-inside-avoid-column">
+                <CardHeader>
+                  <CardTitle>{meta.title}</CardTitle>
+                  <CardDescription>{meta.description}</CardDescription>
+                </CardHeader>
+                <CardContent></CardContent>
+              </Card>
+            </Link>
+          ) : (
+            <></>
+          )
+        )}
+      </div >
+    </>
   );
 }
