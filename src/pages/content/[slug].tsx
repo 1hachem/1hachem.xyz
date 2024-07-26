@@ -2,7 +2,7 @@ import Layout from "@/components/layouts/ContentLayout";
 import Heading from "@/components/mdx/Heading";
 import Text from "@/components/mdx/Text";
 import { getContent, getContentBySlug } from "@/utils/getContent";
-import { GetStaticPropsContext } from "next";
+import type { GetStaticPropsContext } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 

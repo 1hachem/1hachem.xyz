@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import type { TextProps } from "./Text";
+
 const Heading = {
-	H1: ({ children }: any) => (
+	H1: ({ children }: TextProps) => (
 		<>
 			<br />
 			<motion.div
@@ -12,7 +14,7 @@ const Heading = {
 			</motion.div>
 		</>
 	),
-	H2: ({ children }: any) => (
+	H2: ({ children }: TextProps) => (
 		<>
 			<br />
 			<motion.div

@@ -1,16 +1,22 @@
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 const PulseAnimation = {
 	opacity: [1, 0.7, 1],
 	transition: {
 		duration: 1,
-		repeat: Infinity,
+		repeat: Number.POSITIVE_INFINITY,
 		ease: "easeInOut",
 	},
 };
 
+interface TextProps {
+	children: ReactNode;
+	href?: string;
+}
+
 const Text = {
-	p: ({ children }: any) => {
+	p: ({ children }: TextProps) => {
 		return (
 			<motion.p
 				initial={{ opacity: 0 }}
@@ -21,7 +27,7 @@ const Text = {
 			</motion.p>
 		);
 	},
-	a: ({ children, href }: any) => {
+	a: ({ children, href }: TextProps) => {
 		return (
 			<motion.a
 				initial={{ opacity: 0 }}
@@ -34,7 +40,7 @@ const Text = {
 			</motion.a>
 		);
 	},
-	li: ({ children }: any) => {
+	li: ({ children }: TextProps) => {
 		return (
 			<motion.li
 				initial={{ opacity: 0 }}
@@ -48,3 +54,4 @@ const Text = {
 };
 
 export default Text;
+export type { TextProps };
