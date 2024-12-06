@@ -1,0 +1,35 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="flex flex-row justify-between gap-2 m-10">
+    <div class="flex flex-col gap-2">
+        <a
+            href="/"
+            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath === "/" ? "font-bold" : ""}`}
+        >
+            /about_me
+        </a>
+        <a
+            href="/blogs"
+            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath === "/blogs" ? "font-bold" : ""}`}
+        >
+            /blogs
+        </a>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        <a
+            href="https://github.com/1hachem"
+            class="transition-all duration-300 hover:translate-x-[-10px]"
+        >
+            @github -&gt;
+        </a>
+        <a
+            href="https://bsky.app/profile/1hachem.bsky.social"
+            class="transition-all duration-300 hover:translate-x-[-10px]"
+        >
+            @bluesky -&gt;
+        </a>
+    </div>
+</nav>

@@ -1,0 +1,19 @@
+---
+import Navbar from "../components/NavBar.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>1hachem.xyz</title>
+    </head>
+    <body class="bg-black text-white">
+        <Navbar />
+        <article class="mx-auto max-w-[60%] flex flex-col mb-20">
+            <slot />
+        </article>
+    </body>
+</html>

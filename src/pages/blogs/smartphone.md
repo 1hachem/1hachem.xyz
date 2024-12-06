@@ -1,0 +1,52 @@
+---
+layout: "../../layouts/BlogsLayout.astro"
+title: "1 million reason why I never owned a smartphone"
+description: "actually just 8 reasons but I can go on forever..."
+---
+
+# 1 million reasons why I never owned a smartphone
+
+*actually eight reasons why but I can go on and on ... forever*
+
+---
+
+If you are here than probably you asked me the famous question:
+
+**_Hachem, why don't you have a smartphone just like any normal human being?_**
+
+Well ... it seems that "normal people" have mini heart attacks whenever they check for their phone in the wrong pocket, "low battery anxiety" is now a thing with them, and most can't fall asleep without their phones.
+
+It's no secret that people are growing more and more attached to their smartphones, and for an African, who's grandfathers were nomads roaming the earth this materialistic attachment feels wrong to me.
+
+## I don't want to have a mini heart attack or worry for forgetting my charger
+
+I want to break free from these small, but constant nagging effects that come with attachment to devices.
+
+## Spare me please from today's mediocre social interaction
+
+What? Do you think that I can have a meaningful conversation with you when you keep checking your phone?
+
+## I refuse to murder my imagination
+
+I will borrow the words of _David Amadio_ in his awesome _flip phone manifesto_:
+
+> "It's often advertised that smart phones are facilitators of imagination, you can create music, paint paintings, write books, and visualize your designs, this is true, but also false in the same time, sadly we often murder our creativity and imagination with constant distractions. How can someone's imagination flourish if one is always consuming the products of other's imagination, how can someone wonder about the reality of the world, reflect on his own ideas and beliefs or build honest opinions and points of view if his mind is in a constant distraction."
+
+## If it's urgent it always finds its way to reach me
+
+## Reality is my default
+
+People escape reality, they escape from its ugliness, its chaos, from its hard times but only by facing these that identity grow, that mind become more complex.
+
+## People stopped having experiences
+
+Sometimes I think that humans have ceased to experience. We are "illusioned" by how others capture their experiences. We compare, and we become obsessed by how we can capture our experiences similarly, forgetting in the process to live a moment, forgetting to feel anything ...
+
+## I need to slowdown
+
+Are we really meant to be everywhere, everybody in every moment of the day? Or should we come back to the natural pace and rhythm of our brain and body?
+
+## It's strongly addictive
+
+Sure, you may be tempted to think that you can discipline yourself, control your usage, delete some apps and install others, but to be realistic you can never escape your phone addiction unless you create a larger force in an opposite direction. I came to the conclusion the the only great force that can shield me is to completely remove this device from my life, 23 years of doing that and I am still alive ...
+```

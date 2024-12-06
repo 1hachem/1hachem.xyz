@@ -1,0 +1,29 @@
+---
+import Layout from "./Layout.astro";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+const lastModified = dayjs()
+    .utc(Astro.props.frontmatter.lastModified)
+    .format("DD MMMM YYYY");
+
+const { minutesRead } = Astro.props.frontmatter;
+---
+
+<Layout>
+    <p>{minutesRead}</p>
+    <p>last update: {lastModified}</p>
+    <div
+        class="prose-invert
+      prose-h1:font-extrabold
+      prose-h1:text-3xl
+      prose-a:text-blue-400
+      prose-a:underline
+      prose-a:decoration-dotted
+      prose-a:transition
+      prose-a:hover:text-blue-300"
+    >
+        <slot />
+    </div>
+</Layout>
