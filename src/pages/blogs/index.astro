@@ -17,7 +17,10 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
 });
 ---
 
-<Layout title='Blogs - 1hachem.xyz' description='Read Hachem Betrouni latest blog posts.'>
+<Layout
+    title="Blogs - 1hachem.xyz"
+    description="Read Hachem Betrouni latest blog posts."
+>
     <div class="flex flex-col gap-8">
         {
             Object.values(blogs)
@@ -27,18 +30,31 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                         .diff(dayjs.utc(b.frontmatter.lastModified)),
                 )
                 .map((blog) => (
-                    <article class="transform transition-transform duration-300 hover:scale-105 p-5">
-                        <a href={blog.url} data-astro-prefetch>
-                            <h2 class="text-xl">{blog.frontmatter.title}</h2>
-                            <p class="text-gray-300">
-                                {blog.frontmatter.minutesRead}
-                            </p>
-                            <p>{blog.frontmatter.description}</p>
-                            <p>
-                                {dayjs()
-                                    .utc(blog.frontmatter.lastModified)
-                                    .format("DD MMMM YY")}
-                            </p>
+                    <article class="relative transform transition-transform duration-300 hover:scale-105 p-5">
+                        <a
+                            href={blog.url}
+                            data-astro-prefetch
+                            class="flex justify-between items-center group"
+                        >
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <h2 class="text-xl underline md:no-underline group-hover:underline">
+                                        {blog.frontmatter.title}
+                                    </h2>
+                                    <p class="text-gray-300">
+                                        {blog.frontmatter.minutesRead}
+                                    </p>
+                                    <p>{blog.frontmatter.description}</p>
+                                    <p class="inline">
+                                        {dayjs()
+                                            .utc(blog.frontmatter.lastModified)
+                                            .format("DD MMMM YY")}
+                                    </p>
+                                </div>
+                                <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 inline">
+                                    -&gt;
+                                </span>
+                            </div>
                         </a>
                     </article>
                 ))

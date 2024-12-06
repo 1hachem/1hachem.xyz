@@ -21,14 +21,10 @@ const description =
         <link rel="sitemap" href="/sitemap-index.xml" />
         <title>{title || "1hachem.xyz"}</title>
         {description && <meta name="description" content={description} />}
-        <ClientRouter />
     </head>
-    <body
-        class="bg-black text-white"
-        transition:animate={fade({ duration: 200 })}
-    >
+    <body class="bg-black text-white">
         <Navbar />
-        <article class="mx-auto max-w-[60%] flex flex-col mb-20">
+        <article class="mx-auto max-w-[90%] md:max-w-[60%] flex flex-col mb-20">
             <slot />
         </article>
     </body>

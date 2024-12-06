@@ -4,16 +4,17 @@ const currentPath = Astro.url.pathname;
 
 <nav class="flex flex-row justify-between gap-2 m-10">
     <div class="flex flex-col gap-2">
+        <p>Hachem Betrouni</p>
         <a
             href="/"
-            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath == "/" ? "font-bold" : ""}`}
+            class={`${currentPath == "/" ? "font-bold" : ""} hover:underline`}
             data-astro-prefetch="viewport"
         >
             /about_me
         </a>
         <a
             href="/blogs"
-            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath == "/blogs" ? "font-bold" : ""}`}
+            class={`${currentPath == "/blogs" ? "font-bold" : ""} hover:underline`}
             data-astro-prefetch="viewport"
         >
             /blogs
@@ -23,13 +24,15 @@ const currentPath = Astro.url.pathname;
     <div class="flex flex-col gap-2">
         <a
             href="https://github.com/1hachem"
-            class="transition-all duration-300 hover:translate-x-[-10px]"
+            class="transition-transform duration-300 hover:transform hover:translate-x-2 hover:underline"
+            target="_blank"
         >
             @github -&gt;
         </a>
         <a
             href="https://bsky.app/profile/1hachem.bsky.social"
-            class="transition-all duration-300 hover:translate-x-[-10px]"
+            class="transition-all duration-300 hover:translate-x-2 hover:underline"
+            target="_blank"
         >
             @bluesky -&gt;
         </a>
