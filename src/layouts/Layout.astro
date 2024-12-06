@@ -1,13 +1,15 @@
 ---
 import Navbar from "../components/NavBar.astro";
+import { ClientRouter, fade } from "astro:transitions";
 
 interface Props {
-  title?: string;
-  description?: string;
+    title?: string;
+    description?: string;
 }
 
 const title = (Astro.props as Props).title || "1hachem.xyz";
-const description = (Astro.props as Props).description || "Hachem Betrouni personal website";
+const description =
+    (Astro.props as Props).description || "Hachem Betrouni personal website";
 ---
 
 <html lang="en">
@@ -17,10 +19,14 @@ const description = (Astro.props as Props).description || "Hachem Betrouni perso
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <link rel="sitemap" href="/sitemap-index.xml" />
-        <title>{title || '1hachem.xyz'}</title>
+        <title>{title || "1hachem.xyz"}</title>
         {description && <meta name="description" content={description} />}
+        <ClientRouter />
     </head>
-    <body class="bg-black text-white">
+    <body
+        class="bg-black text-white"
+        transition:animate={fade({ duration: 200 })}
+    >
         <Navbar />
         <article class="mx-auto max-w-[60%] flex flex-col mb-20">
             <slot />
