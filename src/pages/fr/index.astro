@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ProfileImage from "../../assets/me.png";
 ---
 
 <Layout
@@ -53,5 +55,10 @@ import Layout from "../../layouts/Layout.astro";
             <h3 class="text-lg font-bold">Outils que J'adore</h3>
             <p>Zeditor, Lazygit, Obsidian, Rofi, Posthog</p>
         </div>
+        <Image
+            class="w-32 rounded-l py-5"
+            src={ProfileImage}
+            alt={"Moi souriant"}
+        />
     </div>
 </Layout>
