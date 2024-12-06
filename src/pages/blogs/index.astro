@@ -17,7 +17,7 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
 });
 ---
 
-<Layout>
+<Layout title='Blogs - 1hachem.xyz' description='Read Hachem Betrouni latest blog posts.'>
     <div class="flex flex-col gap-8">
         {
             Object.values(blogs)
@@ -28,7 +28,7 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                 )
                 .map((blog) => (
                     <article class="transform transition-transform duration-300 hover:scale-105 p-5">
-                        <a href={blog.url}>
+                        <a href={blog.url} data-astro-prefetch>
                             <h2 class="text-xl">{blog.frontmatter.title}</h2>
                             <p class="text-gray-300">
                                 {blog.frontmatter.minutesRead}

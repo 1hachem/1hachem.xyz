@@ -6,13 +6,15 @@ const currentPath = Astro.url.pathname;
     <div class="flex flex-col gap-2">
         <a
             href="/"
-            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath === "/" ? "font-bold" : ""}`}
+            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath == "/" ? "font-bold" : ""}`}
+            data-astro-prefetch="viewport"
         >
             /about_me
         </a>
         <a
             href="/blogs"
-            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath === "/blogs" ? "font-bold" : ""}`}
+            class={`transition-all duration-300 hover:translate-x-[10px] ${currentPath == "/blogs" ? "font-bold" : ""}`}
+            data-astro-prefetch="viewport"
         >
             /blogs
         </a>

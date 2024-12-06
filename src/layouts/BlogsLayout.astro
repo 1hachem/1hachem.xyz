@@ -8,10 +8,10 @@ const lastModified = dayjs()
     .utc(Astro.props.frontmatter.lastModified)
     .format("DD MMMM YYYY");
 
-const { minutesRead } = Astro.props.frontmatter;
+const { minutesRead, title, description } = Astro.props.frontmatter;
 ---
 
-<Layout>
+<Layout title={title} description={description}>
     <p>{minutesRead}</p>
     <p>last update: {lastModified}</p>
     <div

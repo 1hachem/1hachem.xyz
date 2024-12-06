@@ -1,5 +1,13 @@
 ---
 import Navbar from "../components/NavBar.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const title = (Astro.props as Props).title || "1hachem.xyz";
+const description = (Astro.props as Props).description || "Hachem Betrouni personal website";
 ---
 
 <html lang="en">
@@ -8,7 +16,9 @@ import Navbar from "../components/NavBar.astro";
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>1hachem.xyz</title>
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <title>{title || '1hachem.xyz'}</title>
+        {description && <meta name="description" content={description} />}
     </head>
     <body class="bg-black text-white">
         <Navbar />
