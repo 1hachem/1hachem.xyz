@@ -9,9 +9,14 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://1hachem.xyz",
+  i18n: {
+    locales: ["en", "fr", "ja"],
+    defaultLocale: "en",
+  },
   integrations: [tailwind(), sitemap()],
   markdown: {
     remarkPlugins: [remarkReadingTime, remarkModifiedTime],
   },
   prefetch: true,
+  devToolbar: { enabled: false },
 });

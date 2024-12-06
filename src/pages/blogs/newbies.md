@@ -4,9 +4,6 @@ title: "I wish I knew this when I started"
 description: "Piece of advice for young students"
 ---
 
-# I wish I knew this when I started
-*Piece of advice for junior AI students*
-
 ## Switch to Linux
 - The command line is powerful; there are plenty of useful tools that can save you a lot of time and teach you a lot about computers and programming.
 - It's highly customizable which allows your productivity to go brrrrr!

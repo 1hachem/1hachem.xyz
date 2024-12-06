@@ -4,12 +4,6 @@ title: "1 million reason why I never owned a smartphone"
 description: "actually just 8 reasons but I can go on forever..."
 ---
 
-# 1 million reasons why I never owned a smartphone
-
-*actually eight reasons why but I can go on and on ... forever*
-
----
-
 If you are here than probably you asked me the famous question:
 
 **_Hachem, why don't you have a smartphone just like any normal human being?_**

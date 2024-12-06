@@ -12,18 +12,24 @@ const { minutesRead, title, description } = Astro.props.frontmatter;
 ---
 
 <Layout title={title} description={description}>
-    <p>{minutesRead}</p>
-    <p>last update: {lastModified}</p>
-    <div
-        class="prose-invert
-      prose-h1:font-extrabold
-      prose-h1:text-3xl
+    <section class="py-10">
+        <h1 class="text-4xl font-bold">{title}</h1>
+        <p class="text-sm">{minutesRead}</p>
+        <p class="text-sm">last update: {lastModified}</p>
+    </section>
+    <main>
+        <div
+            class="prose-invert
+      prose-h2:font-extrabold
+      prose-h2:text-xl
+      prose-headings:mt-5
       prose-a:text-blue-400
       prose-a:underline
       prose-a:decoration-dotted
       prose-a:transition
       prose-a:hover:text-blue-300"
-    >
-        <slot />
-    </div>
+        >
+            <slot />
+        </div>
+    </main>
 </Layout>

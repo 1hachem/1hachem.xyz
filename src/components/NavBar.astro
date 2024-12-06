@@ -1,23 +1,31 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
 const currentPath = Astro.url.pathname;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const blogsUrl = getRelativeLocaleUrl(lang, "blogs");
 ---
 
-<nav class="flex flex-row justify-between gap-2 m-10">
+<nav class="flex flex-row justify-between gap-2 p-5 md:p-10">
     <div class="flex flex-col gap-2">
-        <p>Hachem Betrouni</p>
+        <a href={`/${lang === "en" ? "" : lang}`}>Hachem Betrouni</a>
         <a
-            href="/"
-            class={`${currentPath == "/" ? "font-bold" : ""} hover:underline`}
+            href={`/${lang === "en" ? "" : lang}`}
+            class={`${currentPath == `/${lang === "en" ? "" : lang}` ? "font-bold" : ""} hover:underline`}
             data-astro-prefetch="viewport"
         >
-            /about_me
+            {t("nav.about_me")}
         </a>
         <a
-            href="/blogs"
-            class={`${currentPath == "/blogs" ? "font-bold" : ""} hover:underline`}
+            href={blogsUrl}
+            class={`${currentPath == blogsUrl ? "font-bold" : ""} hover:underline`}
             data-astro-prefetch="viewport"
         >
-            /blogs
+            {t("nav.blogs")}
         </a>
     </div>
 

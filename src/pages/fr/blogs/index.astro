@@ -1,0 +1,63 @@
+---
+import type { MarkdownInstance } from "astro";
+import Layout from "../../../layouts/Layout.astro";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+interface Frontmatter {
+    title: string;
+    description: string;
+    minutesRead: string;
+    lastModified: any;
+}
+
+const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
+    eager: true,
+});
+---
+
+<Layout
+    title="Blogs - 1hachem.xyz"
+    description="Lisez les derniers articles de blog de Hachem Betrouni."
+>
+    <div class="flex flex-col gap-8">
+        {
+            Object.values(blogs)
+                .sort((a, b) =>
+                    dayjs
+                        .utc(a.frontmatter.lastModified)
+                        .diff(dayjs.utc(b.frontmatter.lastModified)),
+                )
+                .map((blog) => (
+                    <article class="relative transform transition-transform duration-300 hover:scale-105 p-5">
+                        <a
+                            href={blog.url}
+                            data-astro-prefetch
+                            class="flex justify-between items-center group"
+                        >
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <h2 class="text-xl underline md:no-underline group-hover:underline">
+                                        {blog.frontmatter.title}
+                                    </h2>
+                                    <p class="text-gray-300">
+                                        {blog.frontmatter.minutesRead}
+                                    </p>
+                                    <p>{blog.frontmatter.description}</p>
+                                    <p class="inline">
+                                        {dayjs()
+                                            .utc(blog.frontmatter.lastModified)
+                                            .format("DD MMMM YY")}
+                                    </p>
+                                </div>
+                                <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 inline">
+                                    -&gt;
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                ))
+        }
+    </div>
+</Layout>
