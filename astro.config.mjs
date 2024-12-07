@@ -13,7 +13,19 @@ export default defineConfig({
     locales: ["en", "fr", "ja"],
     defaultLocale: "en",
   },
-  integrations: [tailwind(), sitemap()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: {
+          en: "en-US",
+          fr: "fr-CA",
+          ja: "ja-JP",
+        },
+      },
+    }),
+  ],
   markdown: {
     remarkPlugins: [remarkReadingTime, remarkModifiedTime],
   },
