@@ -38,9 +38,9 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                         >
                             <div class="flex justify-between items-end">
                                 <div>
-                                    <h2 class="text-xl underline md:no-underline group-hover:underline">
+                                    <h1 class="text-xl underline md:no-underline group-hover:underline">
                                         {blog.frontmatter.title}
-                                    </h2>
+                                    </h1>
                                     <p class="text-gray-300">
                                         {blog.frontmatter.minutesRead}
                                     </p>
