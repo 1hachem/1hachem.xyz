@@ -2,37 +2,31 @@
 import { Image } from "astro:assets";
 import ProfileImage from "../assets/me.png";
 import Layout from "../layouts/Layout.astro";
+import Github from "../components/github";
 ---
 
 <Layout
     title="About Me - 1hachem.xyz"
     description="Learn more about Hachem Betrouni and his journey."
 >
-    <div class="flex flex-col gap-4">
-        <div class="text-xl">
-            My name is Hachem Betrouni, I am currently working as CTO at
-            <a href="https://big-mama.io" class="text-blue-400 underline"
-                >BIGmama</a
-            >, an AI hatchery 🐣 that takes ideas from domain expertise to AI
-            software. <br />
+    <div class="flex flex-col gap-8">
+        <div class="text-l flex flex-row items-center gap-4">
+            <Image class="w-32" src={ProfileImage} alt={"Me smiling"} />
+            <div>
+                My name is Hachem Betrouni, I am currently working as CTO at
+                <a href="https://big-mama.io" class="text-blue-400 underline"
+                    >BIGmama</a
+                >,
+                <br />
+                an AI hatchery 🐣 that takes ideas from domain expertise to AI software.
+                <br />
+                Currently I lead the development of
+                <a class="text-blue-400 underline" href="https://hyko.ai/"
+                    >Hyko</a
+                > - an AI workflow builder
+            </div>
         </div>
         <div>
-            I lead the development of
-            <ul>
-                <li>
-                    <a class="text-blue-400 underline" href="https://hyko.ai/"
-                        >Hyko</a
-                    > - an AI workflow builder
-                </li>
-                <li>
-                    <a
-                        class="text-blue-400 underline"
-                        href="https://yourscrib.ai/">Yourscrib</a
-                    > - an AI writing assistant
-                </li>
-            </ul>
-        </div>
-        <div class="mt-4">
             <h3 class="text-lg font-bold">Fun Facts About Me</h3>
             <ul>
                 <li>I never owned a smartphone</li>
@@ -41,21 +35,20 @@ import Layout from "../layouts/Layout.astro";
                 <li>I love hitchhiking, camping and unplanned traveling</li>
             </ul>
         </div>
-        <div class="mt-4">
+        <div>
             <h3 class="text-lg font-bold">Technologies I Use</h3>
             <p>
                 Python, TypeScript, FastAPI, MongoDB, Docker, Kubernetes, Redis,
-                Next.js, Astro.js, VIM, GIT
+                Next.js, Astro.js, VIM, GIT, Tailwindcss
             </p>
         </div>
-        <div class="mt-4">
+        <div>
             <h3 class="text-lg font-bold">Tools I love</h3>
-            <p>Zeditor, Lazygit, Obsidian, Rofi, Posthog</p>
+            <p>zeditor, lazygit, obsidian, rofi, posthog, zsh</p>
         </div>
-        <Image
-            class="w-32 rounded-l py-5"
-            src={ProfileImage}
-            alt={"Me smiling"}
-        />
+        <div>
+            <h3 class="text-lg font-bold">Activity this year</h3>
+            <Github client:only />
+        </div>
     </div>
 </Layout>
