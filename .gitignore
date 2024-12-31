@@ -18,4 +18,3 @@ coverage/
 # Misc
 .DS_Store
 .env
-public/
