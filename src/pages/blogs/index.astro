@@ -30,7 +30,7 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                         .diff(dayjs.utc(b.frontmatter.lastModified)),
                 )
                 .map((blog) => (
-                    <article class="relative transform transition-transform duration-300 hover:scale-105 p-5">
+                    <article>
                         <a
                             href={blog.url}
                             data-astro-prefetch
@@ -51,9 +51,6 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                                             .format("DD MMMM YY")}
                                     </p>
                                 </div>
-                                <span class="opacity-0 transition-opacity duration-300 group-hover:opacity-100 inline">
-                                    -&gt;
-                                </span>
                             </div>
                         </a>
                     </article>

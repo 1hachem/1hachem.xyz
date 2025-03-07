@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Fira Code", "monospace"],
+        jet: ["JetBrains Mono"],
       },
     },
   },

@@ -1,21 +1,19 @@
 ---
 import Navbar from "../components/NavBar.astro";
-import { getLangFromUrl } from "../i18n/utils";
-import { languages } from "../i18n/ui";
 import Footer from "../components/Footer.astro";
+import "@fontsource-variable/jetbrains-mono";
 
 interface Props {
     title?: string;
     description?: string;
 }
 
-const lang = getLangFromUrl(Astro.url);
 const title = (Astro.props as Props).title || "1hachem.xyz";
 const description =
     (Astro.props as Props).description || "Hachem Betrouni personal website";
 ---
 
-<html lang={lang}>
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -24,22 +22,8 @@ const description =
         <link rel="sitemap" href="/sitemap-index.xml" />
         <title>{title || "1hachem.xyz"}</title>
         {description && <meta name="description" content={description} />}
-        <link rel="alternate" lang="x-default" href="/" />
-        {
-            Object.keys(languages).map((langKey) => {
-                if (langKey !== "en") {
-                    return (
-                        <link
-                            rel="alternate"
-                            lang={langKey}
-                            href={`/${langKey}`}
-                        />
-                    );
-                }
-            })
-        }
     </head>
-    <body class="bg-black text-white min-h-screen flex flex-col">
+    <body class="bg-black text-white min-h-screen flex flex-col font-jet">
         <Navbar />
         <article
             class="mx-auto max-w-[90%] md:max-w-[50%] flex flex-col mb-20 flex-grow"

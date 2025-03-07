@@ -1,48 +1,31 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-
 const currentPath = Astro.url.pathname;
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const blogsUrl = getRelativeLocaleUrl(lang, "blogs");
 ---
 
 <nav class="flex flex-row justify-between gap-2 p-5 md:p-10">
     <div class="flex flex-col gap-2">
-        <a href={`/${lang === "en" ? "" : lang}`}>Hachem Betrouni</a>
+        <a href={"/"}>Hachem Betrouni</a>
         <a
-            href={`/${lang === "en" ? "" : lang}`}
-            class={`${currentPath == `/${lang === "en" ? "" : lang}` ? "font-bold" : ""} hover:underline`}
+            href={"/"}
+            class={`${currentPath == `/` ? "font-bold" : ""} hover:underline`}
             data-astro-prefetch="viewport"
         >
-            {t("nav.about_me")}
+            about_me
         </a>
         <a
-            href={blogsUrl}
-            class={`${currentPath == blogsUrl ? "font-bold" : ""} hover:underline`}
+            href={"/blogs"}
+            class={`${currentPath == "/blogs" ? "font-bold" : ""} hover:underline`}
             data-astro-prefetch="viewport"
         >
-            {t("nav.blogs")}
+            my_blogs
         </a>
     </div>
 
-    <div class="flex flex-col gap-2">
-        <a
-            href="https://github.com/1hachem"
-            class="transition-transform duration-300 hover:transform hover:translate-x-2 hover:underline"
-            target="_blank"
-        >
-            @github -&gt;
-        </a>
-        <a
-            href="https://bsky.app/profile/1hachem.bsky.social"
-            class="transition-all duration-300 hover:translate-x-2 hover:underline"
-            target="_blank"
-        >
-            @bluesky -&gt;
-        </a>
-    </div>
+    <a
+        href="https://github.com/1hachem"
+        class="transition-transform duration-300 hover:transform hover:translate-x-1 hover:underline"
+        target="_blank"
+    >
+        @github -&gt;
+    </a>
 </nav>
