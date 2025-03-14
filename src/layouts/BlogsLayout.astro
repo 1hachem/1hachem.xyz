@@ -1,11 +1,21 @@
 ---
+interface Props {
+    frontmatter: {
+        lastModified: Date;
+        title: string;
+        description: string;
+        minutesRead: string;
+    };
+}
+
 import Layout from "./Layout.astro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 
 dayjs.extend(utc);
-const lastModified = dayjs()
-    .utc(Astro.props.frontmatter.lastModified)
+
+const lastModified = dayjs(Astro.props.frontmatter.lastModified)
+    .utc()
     .format("DD MMMM YYYY");
 
 const { minutesRead, title, description } = Astro.props.frontmatter;
