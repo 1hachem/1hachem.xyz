@@ -1,6 +1,8 @@
 ---
+import Callout from "@/components/Callout.astro";
+import CalloutBody from "@/components/CalloutBody.astro";
+import CalloutTitle from "@/components/CalloutTitle.astro";
 import BlogsLayout from "@/layouts/BlogsLayout.astro";
-import { Heading } from "@astropub/icons";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -22,6 +24,11 @@ const { Content, headings, remarkPluginFrontmatter } = await render(post);
   minutesRead={remarkPluginFrontmatter.minutesRead}
   headings={headings}
 >
-  <h1>{post.data.title}</h1>
-  <Content />
+  <Content
+    components={{
+      callout: Callout,
+      "callout-body": CalloutBody,
+      "callout-title": CalloutTitle,
+    }}
+  />
 </BlogsLayout>

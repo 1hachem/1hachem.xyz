@@ -16,6 +16,7 @@
     "@astrojs/ts-plugin": "^1.10.4",
     "@astropub/icons": "^0.2.0",
     "@fontsource-variable/jetbrains-mono": "^5.2.5",
+    "@r4ai/remark-callout": "^0.6.2",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "astro": "^5.0.3",
