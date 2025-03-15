@@ -1,33 +1,25 @@
 ---
 interface Props {
-  frontmatter: {
-    lastModified: Date;
-    title: string;
-    description: string;
-    minutesRead: string;
-  };
-  headings: [
-    {
-      depth: number;
-      text: string;
-      slug: string;
-    },
-  ];
+  lastModified: Date;
+  title: string;
+  description: string;
+  minutesRead: string;
+  headings: MarkdownHeading[];
 }
 
 import Layout from "@/layouts/Layout.astro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import TOC from "@/components/TOC.astro";
+import type { MarkdownHeading } from "astro";
 
 dayjs.extend(utc);
 
-const lastModified = dayjs(Astro.props.frontmatter.lastModified)
+const lastModified = dayjs(Astro.props.lastModified)
   .utc()
   .format("DD MMMM YYYY");
 
-const { headings } = Astro.props;
-const { minutesRead, title, description } = Astro.props.frontmatter;
+const { headings, minutesRead, title, description } = Astro.props;
 ---
 
 <Layout title={title} description={description}>

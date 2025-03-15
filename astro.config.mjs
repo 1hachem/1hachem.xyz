@@ -7,10 +7,12 @@ import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 import sitemap from "@astrojs/sitemap";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://1hachem.xyz",
-  integrations: [react(), tailwind(), sitemap()],
+  integrations: [react(), tailwind(), sitemap(), mdx()],
   markdown: {
     remarkPlugins: [remarkReadingTime, remarkModifiedTime],
   },

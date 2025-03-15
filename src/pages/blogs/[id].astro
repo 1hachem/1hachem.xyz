@@ -1,0 +1,27 @@
+---
+import BlogsLayout from "@/layouts/BlogsLayout.astro";
+import { Heading } from "@astropub/icons";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+---
+
+<BlogsLayout
+  title={post.data.title}
+  description={post.data.description}
+  lastModified={remarkPluginFrontmatter.lastModified}
+  minutesRead={remarkPluginFrontmatter.minutesRead}
+  headings={headings}
+>
+  <h1>{post.data.title}</h1>
+  <Content />
+</BlogsLayout>
