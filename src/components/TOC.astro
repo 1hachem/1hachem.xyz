@@ -1,0 +1,32 @@
+---
+interface Props {
+    headings: [
+        {
+            depth: number;
+            text: string;
+            slug: string;
+        },
+    ];
+}
+
+const { headings } = Astro.props;
+const toc = headings.filter((heading) => heading.depth == 2);
+---
+
+<nav class="sticky pt-10 pr-2 top-1">
+    <h1 class="font-bold text-xl">Table of contents</h1>
+    <ol class="list-decimal">
+        {
+            toc.map((heading) => (
+                <li>
+                    <a
+                        href={"#" + heading.slug}
+                        class="hover:underline line-clamp-1"
+                    >
+                        {heading.text}
+                    </a>
+                </li>
+            ))
+        }
+    </ol>
+</nav>

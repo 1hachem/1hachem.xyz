@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import ProfileImage from "../assets/me.png";
-import Layout from "../layouts/Layout.astro";
-import Github from "../components/github";
+import ProfileImage from "@/assets/me.png";
+import Github from "@/components/github";
+import PageLayout from "@/layouts/PageLayout.astro";
 ---
 
-<Layout
+<PageLayout
     title="About Me - 1hachem.xyz"
     description="Learn more about Hachem Betrouni and his journey."
 >
@@ -18,7 +18,7 @@ import Github from "../components/github";
                     >BIGmama</a
                 >,
                 <br />
-                an AI hatchery 🐣 that takes ideas from domain expertise to AI software.
+                an AI hatchery that takes ideas from domain expertise to AI software.
                 <br />
                 Currently I lead the development of
                 <a class="text-blue-400 underline" href="https://hyko.ai/"
@@ -53,4 +53,4 @@ import Github from "../components/github";
             <Github client:only />
         </div>
     </div>
-</Layout>
+</PageLayout>

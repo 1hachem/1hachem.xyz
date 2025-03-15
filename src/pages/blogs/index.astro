@@ -1,8 +1,9 @@
 ---
 import type { MarkdownInstance } from "astro";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
+import PageLayout from "@/layouts/PageLayout.astro";
 
 dayjs.extend(utc);
 interface Frontmatter {
@@ -17,7 +18,7 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
 });
 ---
 
-<Layout
+<PageLayout
     title="Blogs - 1hachem.xyz"
     description="Read Hachem Betrouni latest blog posts."
 >
@@ -57,4 +58,4 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                 ))
         }
     </div>
-</Layout>
+</PageLayout>

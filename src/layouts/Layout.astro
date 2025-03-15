@@ -1,12 +1,12 @@
 ---
-import Navbar from "../components/NavBar.astro";
-import Footer from "../components/Footer.astro";
-import "@fontsource-variable/jetbrains-mono";
-
 interface Props {
     title?: string;
     description?: string;
 }
+
+import Navbar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "@fontsource-variable/jetbrains-mono";
 
 const title = (Astro.props as Props).title || "1hachem.xyz";
 const description =
@@ -24,12 +24,10 @@ const description =
         {description && <meta name="description" content={description} />}
     </head>
     <body class="bg-black text-white min-h-screen flex flex-col font-jet">
-        <Navbar />
-        <article
-            class="mx-auto max-w-[90%] md:max-w-[50%] flex flex-col mb-20 flex-grow"
-        >
+        <div class="min-h-screen">
+            <Navbar />
             <slot />
-        </article>
+        </div>
         <Footer />
     </body>
 </html>
