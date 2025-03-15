@@ -10,7 +10,7 @@ interface Frontmatter {
   title: string;
   description: string;
   minutesRead: string;
-  lastModified: any;
+  lastModified: string;
 }
 
 const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
@@ -22,16 +22,12 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
   title="Blogs - 1hachem.xyz"
   description="Read Hachem Betrouni latest blog posts."
 >
-  <div class="flex flex-col gap-8">
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
     {
       Object.values(blogs)
-        .sort((a, b) =>
-          dayjs
-            .utc(a.frontmatter.lastModified)
-            .diff(dayjs.utc(b.frontmatter.lastModified)),
-        )
+        .sort((a, b) => dayjs.utc().diff(dayjs.utc(b.frontmatter.lastModified)))
         .map((blog) => (
-          <article>
+          <article class="h-full w-full rounded-md border p-4 hover:scale-105">
             <a
               href={blog.url}
               data-astro-prefetch
@@ -45,8 +41,8 @@ const blogs = import.meta.glob<MarkdownInstance<Frontmatter>>("./*.md", {
                   <p class="text-gray-300">{blog.frontmatter.minutesRead}</p>
                   <p>{blog.frontmatter.description}</p>
                   <p class="inline">
-                    {dayjs()
-                      .utc(blog.frontmatter.lastModified)
+                    {dayjs(blog.frontmatter.lastModified)
+                      .utc()
                       .format("DD MMMM YY")}
                   </p>
                 </div>

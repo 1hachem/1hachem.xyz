@@ -20,6 +20,9 @@ importers:
       '@astrojs/ts-plugin':
         specifier: ^1.10.4
         version: 1.10.4
+      '@astropub/icons':
+        specifier: ^0.2.0
+        version: 0.2.0(astro@5.0.3(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.5
         version: 5.2.5
@@ -123,6 +126,11 @@ packages:
 
   '@astrojs/yaml2ts@0.2.2':
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
+
+  '@astropub/icons@0.2.0':
+    resolution: {integrity: sha512-qM/ldW/9rVHULNOZgz/23Yzgm2r3Iy2JJ1FuvJB6sFU67n61o1ImuXdHiaWSNoEHubD+IUkD9WG0hbhINgszqA==}
+    peerDependencies:
+      astro: '*'
 
   '@babel/code-frame@7.26.2':
     resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
@@ -1757,8 +1765,8 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  react-activity-calendar@2.7.5:
-    resolution: {integrity: sha512-sVXqN4wDsjrwdjCJfgrOYP8Q6o8HfMV+lmxn4GQz4gacOwQNXIC9y0Obs5EqNifqZVJqnGSV1dLmPNWFKw4OLA==}
+  react-activity-calendar@2.7.10:
+    resolution: {integrity: sha512-O6ev2JxbsbmF7hPpRCkiXxQ+vGwXS5iUVwOCqtvlJnGhpyJ3ZJap7/qfIZA0WZcDj4gpQh2Dcvkmwh3yBXRrPQ==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
@@ -2303,6 +2311,10 @@ snapshots:
   '@astrojs/yaml2ts@0.2.2':
     dependencies:
       yaml: 2.6.1
+
+  '@astropub/icons@0.2.0(astro@5.0.3(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))':
+    dependencies:
+      astro: 5.0.3(jiti@1.21.6)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -3985,7 +3997,7 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  react-activity-calendar@2.7.5(react@19.0.0):
+  react-activity-calendar@2.7.10(react@19.0.0):
     dependencies:
       date-fns: 4.1.0
       react: 19.0.0
@@ -4003,7 +4015,7 @@ snapshots:
   react-github-calendar@4.5.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       react: 19.0.0
-      react-activity-calendar: 2.7.5(react@19.0.0)
+      react-activity-calendar: 2.7.10(react@19.0.0)
       react-dom: 19.0.0(react@19.0.0)
       react-error-boundary: 4.1.2(react@19.0.0)
 

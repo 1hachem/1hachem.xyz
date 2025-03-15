@@ -1,8 +1,9 @@
 ---
+import GitHubLogo from "@astropub/icons/GitHubLogo";
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="flex flex-row justify-between gap-2 p-5 md:p-10">
+<nav class="flex flex-row justify-between gap-2 p-5 md:pl-10 md:pr-10">
   <div class="flex flex-col gap-2">
     <a href={"/"}>Hachem Betrouni</a>
     <a
@@ -23,9 +24,12 @@ const currentPath = Astro.url.pathname;
 
   <a
     href="https://github.com/1hachem"
-    class="transition-transform duration-300 hover:translate-x-1 hover:transform hover:underline"
+    class="flex items-center gap-2 hover:underline"
     target="_blank"
   >
-    @github -&gt;
+    <div class="w-5">
+      <GitHubLogo />
+    </div>
+    @1hachem
   </a>
 </nav>

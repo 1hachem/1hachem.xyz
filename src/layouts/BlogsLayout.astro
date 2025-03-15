@@ -44,7 +44,7 @@ const { minutesRead, title, description } = Astro.props.frontmatter;
         <slot />
       </div>
     </main>
-    <div class="max-w-[20%] pr-8">
+    <div class="hidden max-w-[20%] pr-8 md:block">
       <TOC headings={headings} />
     </div>
   </div>

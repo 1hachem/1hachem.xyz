@@ -6,6 +6,7 @@ interface Props {
 
 import Navbar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter, fade } from "astro:transitions";
 import "@fontsource-variable/jetbrains-mono";
 
 const title = (Astro.props as Props).title || "1hachem.xyz";
@@ -13,7 +14,7 @@ const description =
   (Astro.props as Props).description || "Hachem Betrouni personal website";
 ---
 
-<html>
+<html transition:name="root" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -22,10 +23,11 @@ const description =
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title || "1hachem.xyz"}</title>
     {description && <meta name="description" content={description} />}
+    <ClientRouter />
   </head>
   <body class="flex min-h-screen flex-col bg-black font-jet text-white">
-    <div class="min-h-screen">
-      <Navbar />
+    <Navbar />
+    <div class="min-h-screen" transition:animate={fade({ duration: "0.3s" })}>
       <slot />
     </div>
     <Footer />
