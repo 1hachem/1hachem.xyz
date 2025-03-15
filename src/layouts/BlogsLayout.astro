@@ -1,18 +1,18 @@
 ---
 interface Props {
-    frontmatter: {
-        lastModified: Date;
-        title: string;
-        description: string;
-        minutesRead: string;
-    };
-    headings: [
-        {
-            depth: number;
-            text: string;
-            slug: string;
-        },
-    ];
+  frontmatter: {
+    lastModified: Date;
+    title: string;
+    description: string;
+    minutesRead: string;
+  };
+  headings: [
+    {
+      depth: number;
+      text: string;
+      slug: string;
+    },
+  ];
 }
 
 import Layout from "@/layouts/Layout.astro";
@@ -23,37 +23,29 @@ import TOC from "@/components/TOC.astro";
 dayjs.extend(utc);
 
 const lastModified = dayjs(Astro.props.frontmatter.lastModified)
-    .utc()
-    .format("DD MMMM YYYY");
+  .utc()
+  .format("DD MMMM YYYY");
 
 const { headings } = Astro.props;
 const { minutesRead, title, description } = Astro.props.frontmatter;
 ---
 
 <Layout title={title} description={description}>
-    <div class="flex mb-10">
-        <main class="mx-auto max-w-[90%] md:max-w-[50%] flex flex-col">
-            <section class="py-10">
-                <h1 class="text-4xl font-bold">{title}</h1>
-                <p class="text-sm">{minutesRead}</p>
-                <p class="text-sm">last update: {lastModified}</p>
-            </section>
-            <div
-                class="prose-invert
-      prose-h2:font-extrabold
-      prose-h2:text-xl
-      prose-headings:mt-5
-      prose-a:text-blue-400
-      prose-a:underline
-      prose-a:decoration-dotted
-      prose-a:transition
-      prose-a:hover:text-blue-300"
-            >
-                <slot />
-            </div>
-        </main>
-        <div class="max-w-[20%] pr-8">
-            <TOC headings={headings} />
-        </div>
+  <div class="mb-10 flex">
+    <main class="mx-auto flex max-w-[90%] flex-col md:max-w-[50%]">
+      <section class="py-10">
+        <h1 class="text-4xl font-bold">{title}</h1>
+        <p class="text-sm">{minutesRead}</p>
+        <p class="text-sm">last update: {lastModified}</p>
+      </section>
+      <div
+        class="prose-invert prose-headings:mt-4 prose-h2:text-xl prose-h2:font-extrabold prose-a:text-blue-400 prose-a:underline prose-a:decoration-dotted prose-a:transition prose-a:hover:text-blue-300"
+      >
+        <slot />
+      </div>
+    </main>
+    <div class="max-w-[20%] pr-8">
+      <TOC headings={headings} />
     </div>
+  </div>
 </Layout>
