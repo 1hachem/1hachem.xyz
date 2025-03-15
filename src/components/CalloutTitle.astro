@@ -1,0 +1,25 @@
+---
+import { Code, Checkbox, Pencil1, Quote } from "@astropub/icons";
+type Props = {
+  calloutType: "note" | "todo" | "bug" | "quote";
+};
+
+const { calloutType } = Astro.props;
+---
+
+<div
+  class={`flex gap-2 p-2 rounded-t-lg items-center
+${calloutType === "note" ? "bg-blue-900" : ""}
+${calloutType === "todo" ? "bg-yellow-900" : ""}
+${calloutType === "bug" ? "bg-red-900" : ""}
+${calloutType === "quote" ? "bg-purple-900" : ""}
+`}
+>
+  <div class="w-5">
+    {calloutType === "note" && <Code />}
+    {calloutType === "todo" && <Checkbox />}
+    {calloutType === "bug" && <Pencil1 />}
+    {calloutType === "quote" && <Quote />}
+  </div>
+  <slot />
+</div>

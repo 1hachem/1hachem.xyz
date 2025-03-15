@@ -1,0 +1,11 @@
+---
+type Props = {
+  calloutType: "note" | "todo" | "bug";
+};
+
+const { calloutType } = Astro.props;
+---
+
+<div class="rounded-b-xl bg-stone-900 p-5 pb-10 pt-10">
+  <slot />
+</div>

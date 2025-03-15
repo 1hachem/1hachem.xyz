@@ -1,0 +1,34 @@
+---
+import Callout from "@/components/Callout.astro";
+import CalloutBody from "@/components/CalloutBody.astro";
+import CalloutTitle from "@/components/CalloutTitle.astro";
+import BlogsLayout from "@/layouts/BlogsLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+---
+
+<BlogsLayout
+  title={post.data.title}
+  description={post.data.description}
+  lastModified={remarkPluginFrontmatter.lastModified}
+  minutesRead={remarkPluginFrontmatter.minutesRead}
+  headings={headings}
+>
+  <Content
+    components={{
+      callout: Callout,
+      "callout-body": CalloutBody,
+      "callout-title": CalloutTitle,
+    }}
+  />
+</BlogsLayout>

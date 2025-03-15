@@ -1,12 +1,8 @@
 ---
+import type { MarkdownHeading } from "astro";
+
 interface Props {
-  headings: [
-    {
-      depth: number;
-      text: string;
-      slug: string;
-    },
-  ];
+  headings: MarkdownHeading[];
 }
 
 const { headings } = Astro.props;
