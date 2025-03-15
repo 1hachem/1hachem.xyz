@@ -1,35 +1,51 @@
 ---
-import Layout from "./Layout.astro";
+interface Props {
+  frontmatter: {
+    lastModified: Date;
+    title: string;
+    description: string;
+    minutesRead: string;
+  };
+  headings: [
+    {
+      depth: number;
+      text: string;
+      slug: string;
+    },
+  ];
+}
+
+import Layout from "@/layouts/Layout.astro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
+import TOC from "@/components/TOC.astro";
 
 dayjs.extend(utc);
-const lastModified = dayjs()
-    .utc(Astro.props.frontmatter.lastModified)
-    .format("DD MMMM YYYY");
 
+const lastModified = dayjs(Astro.props.frontmatter.lastModified)
+  .utc()
+  .format("DD MMMM YYYY");
+
+const { headings } = Astro.props;
 const { minutesRead, title, description } = Astro.props.frontmatter;
 ---
 
 <Layout title={title} description={description}>
-    <section class="py-10">
+  <div class="mb-10 flex">
+    <main class="mx-auto flex max-w-[90%] flex-col md:max-w-[50%]">
+      <section class="py-10">
         <h1 class="text-4xl font-bold">{title}</h1>
         <p class="text-sm">{minutesRead}</p>
         <p class="text-sm">last update: {lastModified}</p>
-    </section>
-    <main>
-        <div
-            class="prose-invert
-      prose-h2:font-extrabold
-      prose-h2:text-xl
-      prose-headings:mt-5
-      prose-a:text-blue-400
-      prose-a:underline
-      prose-a:decoration-dotted
-      prose-a:transition
-      prose-a:hover:text-blue-300"
-        >
-            <slot />
-        </div>
+      </section>
+      <div
+        class="prose-invert prose-headings:mt-4 prose-h2:text-xl prose-h2:font-extrabold prose-a:text-blue-400 prose-a:underline prose-a:decoration-dotted prose-a:transition prose-a:hover:text-blue-300"
+      >
+        <slot />
+      </div>
     </main>
+    <div class="hidden max-w-[20%] pr-8 md:block">
+      <TOC headings={headings} />
+    </div>
+  </div>
 </Layout>

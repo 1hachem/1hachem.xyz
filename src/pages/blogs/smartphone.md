@@ -43,4 +43,7 @@ Are we really meant to be everywhere, everybody in every moment of the day? Or s
 ## It's strongly addictive
 
 Sure, you may be tempted to think that you can discipline yourself, control your usage, delete some apps and install others, but to be realistic you can never escape your phone addiction unless you create a larger force in an opposite direction. I came to the conclusion the the only great force that can shield me is to completely remove this device from my life, 23 years of doing that and I am still alive ...
+
+```
+
 ```

@@ -1,35 +1,35 @@
 ---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
 import Navbar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter, fade } from "astro:transitions";
 import "@fontsource-variable/jetbrains-mono";
-
-interface Props {
-    title?: string;
-    description?: string;
-}
 
 const title = (Astro.props as Props).title || "1hachem.xyz";
 const description =
-    (Astro.props as Props).description || "Hachem Betrouni personal website";
+  (Astro.props as Props).description || "Hachem Betrouni personal website";
 ---
 
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="sitemap" href="/sitemap-index.xml" />
-        <title>{title || "1hachem.xyz"}</title>
-        {description && <meta name="description" content={description} />}
-    </head>
-    <body class="bg-black text-white min-h-screen flex flex-col font-jet">
-        <Navbar />
-        <article
-            class="mx-auto max-w-[90%] md:max-w-[50%] flex flex-col mb-20 flex-grow"
-        >
-            <slot />
-        </article>
-        <Footer />
-    </body>
+<html transition:name="root" transition:animate="none">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>{title || "1hachem.xyz"}</title>
+    {description && <meta name="description" content={description} />}
+    <ClientRouter />
+  </head>
+  <body class="flex min-h-screen flex-col bg-black font-jet text-white">
+    <Navbar />
+    <div class="min-h-screen" transition:animate={fade({ duration: "0.3s" })}>
+      <slot />
+    </div>
+    <Footer />
+  </body>
 </html>

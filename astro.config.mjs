@@ -1,9 +1,9 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import { remarkReadingTime } from "./remark-reading-time.mjs";
-import { remarkModifiedTime } from "./remark-modified-time.mjs";
-import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import { remarkModifiedTime } from "./remark-modified-time.mjs";
+import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 import sitemap from "@astrojs/sitemap";
 
