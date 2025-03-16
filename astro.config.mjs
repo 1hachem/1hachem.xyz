@@ -1,15 +1,13 @@
-// @ts-check
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import remarkCallout from "@r4ai/remark-callout";
 
+import vercel from "@astrojs/vercel";
 import { defineConfig } from "astro/config";
 import { remarkModifiedTime } from "./remark-modified-time.mjs";
 import { remarkReadingTime } from "./remark-reading-time.mjs";
-
-import node from "@astrojs/node";
 
 export default defineConfig({
   site: "https://1hachem.xyz",
@@ -45,7 +43,5 @@ export default defineConfig({
   prefetch: true,
   devToolbar: { enabled: false },
 
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: vercel(),
 });
