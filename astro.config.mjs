@@ -9,9 +9,12 @@ import { defineConfig } from "astro/config";
 import { remarkModifiedTime } from "./remark-modified-time.mjs";
 import { remarkReadingTime } from "./remark-reading-time.mjs";
 
+import node from "@astrojs/node";
+
 export default defineConfig({
   site: "https://1hachem.xyz",
   integrations: [react(), tailwind(), sitemap(), mdx()],
+
   markdown: {
     remarkPlugins: [
       remarkReadingTime,
@@ -38,6 +41,11 @@ export default defineConfig({
       ],
     ],
   },
+
   prefetch: true,
   devToolbar: { enabled: false },
+
+  adapter: node({
+    mode: "standalone",
+  }),
 });

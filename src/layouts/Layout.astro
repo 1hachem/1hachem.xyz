@@ -5,6 +5,7 @@ interface Props {
 }
 
 import Navbar from "../components/NavBar.astro";
+import "@/styles/global.css";
 import Footer from "../components/Footer.astro";
 import { ClientRouter, fade } from "astro:transitions";
 import "@fontsource-variable/jetbrains-mono";
@@ -25,7 +26,7 @@ const description =
     {description && <meta name="description" content={description} />}
     <ClientRouter />
   </head>
-  <body class="flex min-h-screen flex-col bg-black font-jet text-white">
+  <body class="bg-background flex min-h-screen flex-col font-jet text-white">
     <Navbar />
     <div class="min-h-screen" transition:animate={fade({ duration: "0.3s" })}>
       <slot />

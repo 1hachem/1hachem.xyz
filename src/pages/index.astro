@@ -1,36 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import ProfileImage from "@/assets/me.png";
-import Github from "@/components/github";
 import PageLayout from "@/layouts/PageLayout.astro";
+import Activity from "@/components/Activity.astro";
 ---
 
 <PageLayout
   title="About Me - 1hachem.xyz"
   description="Learn more about Hachem Betrouni and his journey."
 >
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-10">
+    <h1 class="text-2xl">Salam alikom, It's Hachem</h1>
+
     <div class="text-l flex flex-row items-center gap-4">
       <Image class="w-32" src={ProfileImage} alt={"Me smiling"} />
       <div>
-        My name is Hachem Betrouni, I am currently working as CTO at
-        <a href="https://big-mama.io" class="text-blue-400 underline">BIGmama</a
-        >,
+        I'm currently working as CTO at
+        <a href="https://big-mama.io" class="text-primary">BIGmama</a>,
         <br />
-        an AI hatchery that takes ideas from domain expertise to AI software.
+        an AI hatchery that combines human expertise into AI software.
         <br />
         Currently I lead the development of
-        <a class="text-blue-400 underline" href="https://hyko.ai/">Hyko</a> - an
-        AI workflow builder
+        <a href="https://hyko.ai/" class="text-primary">Hyko</a> - an AI workflow
+        builder
       </div>
-    </div>
-    <div>
-      <h3 class="text-lg font-bold">Fun Facts About Me</h3>
-      <ul>
-        <li>Husband and father</li>
-        <li>Never owned a smartphone</li>
-        <li>Hate social media facebook, linkedin, X, you name it</li>
-      </ul>
     </div>
     <div>
       <h3 class="text-lg font-bold">Technologies I Use</h3>
@@ -44,8 +37,18 @@ import PageLayout from "@/layouts/PageLayout.astro";
       <p>zeditor, lazygit, obsidian, rofi, posthog, zsh, tailscale, github</p>
     </div>
     <div>
-      <h3 class="text-lg font-bold">Activity this year</h3>
-      <Github client:only />
+      <h3 class="text-lg font-bold">Fun Facts About Me</h3>
+      <ul>
+        <li>Husband and father</li>
+        <li>Never owned a smartphone</li>
+        <li>Hate social media facebook, linkedin, X, you name it</li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-8">
+      <h3 class="text-center text-lg font-bold">
+        Going to flex my github activity here
+      </h3>
+      <Activity />
     </div>
   </div>
 </PageLayout>

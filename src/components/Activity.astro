@@ -1,0 +1,42 @@
+---
+import { ActivityCalendar, type ThemeInput } from "react-activity-calendar";
+
+export type Activity = {
+  date: string;
+  count: number;
+  level: 0 | 1 | 2 | 3 | 4;
+};
+
+export type Year = number | "last";
+
+export type ApiResponse = {
+  total: {
+    [year: number]: number;
+    [year: string]: number;
+  };
+  contributions: Array<Activity>;
+};
+
+export const prerender = false;
+
+const apiUrl = "https://github-contributions-api.jogruber.de/v4/";
+const response = await fetch(`${apiUrl}1hachem?y=last`);
+const data = (await response.json()) as ApiResponse;
+
+const gitHubTheme = {
+  dark: ["#04080F", "#507DBC", "#BBD1EA", "#A1C6EA", "#DAE3E5"],
+} satisfies ThemeInput;
+
+const defaultLabels = {
+  totalCount:
+    "{{count}} contributions in the last year (hope my wife won't see this)",
+};
+---
+
+<ActivityCalendar
+  data={data.contributions}
+  theme={gitHubTheme}
+  maxLevel={4}
+  labels={defaultLabels}
+  colorScheme="dark"
+/>

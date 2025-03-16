@@ -9,10 +9,10 @@ const { calloutType } = Astro.props;
 
 <div
   class={`flex gap-2 p-2 rounded-t-lg items-center
-${calloutType === "note" ? "bg-blue-900" : ""}
-${calloutType === "todo" ? "bg-yellow-900" : ""}
-${calloutType === "bug" ? "bg-red-900" : ""}
-${calloutType === "quote" ? "bg-purple-900" : ""}
+${calloutType === "note" ? "bg-primary" : ""}
+${calloutType === "todo" ? "bg-primary" : ""}
+${calloutType === "bug" ? "bg-red text-black" : ""}
+${calloutType === "quote" ? "bg-secondary text-background" : ""}
 `}
 >
   <div class="w-5">
