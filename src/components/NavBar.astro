@@ -1,35 +1,23 @@
 ---
 import GitHubLogo from "@astropub/icons/GitHubLogo";
 const currentPath = Astro.url.pathname;
+console.log(currentPath);
 ---
 
-<nav class="flex flex-row justify-between gap-2 p-5 md:pl-10 md:pr-10">
-  <div class="flex flex-col gap-2">
-    <a href={"/"}>Hachem Betrouni</a>
-    <a
-      href={"/"}
-      class={`${currentPath == `/` ? "font-bold" : ""} hover:underline`}
-      data-astro-prefetch="viewport"
-    >
-      about_me
-    </a>
-    <a
-      href={"/blogs/all"}
-      class={`${currentPath == "/blogs" ? "font-bold" : ""} hover:underline`}
-      data-astro-prefetch="viewport"
-    >
-      my_blogs
-    </a>
-  </div>
-
+<nav class="flex flex-col gap-2 p-5 md:pl-10">
+  <a href={"/"}>Hachem Betrouni</a>
   <a
-    href="https://github.com/1hachem"
-    class="flex items-center gap-2 hover:underline"
-    target="_blank"
+    href={"/"}
+    class={`${currentPath == `/` ? "font-bold" : ""} hover:underline`}
+    data-astro-prefetch="viewport"
   >
-    <div class="w-5">
-      <GitHubLogo />
-    </div>
-    @1hachem
+    about_me
+  </a>
+  <a
+    href={"/blogs"}
+    class={`${currentPath.includes("/blogs") ? "font-bold" : ""} hover:underline`}
+    data-astro-prefetch="viewport"
+  >
+    my_blogs
   </a>
 </nav>

@@ -2,15 +2,18 @@
 import Callout from "@/components/blogs/Callout.astro";
 import CalloutBody from "@/components/blogs/CalloutBody.astro";
 import CalloutTitle from "@/components/blogs/CalloutTitle.astro";
+import Verse from "@/components/blogs/Verse.astro";
 import BlogsLayout from "@/layouts/BlogsLayout.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  return posts.map((post) => ({
-    params: { id: post.id },
-    props: { post },
-  }));
+  return posts
+    .filter((blog) => blog.data.published)
+    .map((post) => ({
+      params: { id: post.id },
+      props: { post },
+    }));
 }
 
 const { post } = Astro.props;
@@ -29,6 +32,7 @@ const { Content, headings, remarkPluginFrontmatter } = await render(post);
       callout: Callout,
       "callout-body": CalloutBody,
       "callout-title": CalloutTitle,
+      Verse: Verse,
     }}
   />
 </BlogsLayout>

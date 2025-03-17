@@ -15,7 +15,8 @@ export function getStaticPaths() {
 const { category } = Astro.params;
 
 let blogs = (await getCollection("blog")).filter(
-  (blog) => blog.data.tag == category || category == "all",
+  (blog) =>
+    (blog.data.tag == category || category == "all") && blog.data.published,
 );
 ---
 

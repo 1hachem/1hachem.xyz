@@ -8,6 +8,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     tag: z.enum(TAGS),
+    published: z.boolean().default(false),
   }),
 });
 

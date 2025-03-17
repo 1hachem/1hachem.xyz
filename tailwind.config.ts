@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         jet: ["JetBrains Mono"],
+        arabic: ["Noto Naskh Arabic Variable"],
       },
       colors: {
         background: "#04080F",

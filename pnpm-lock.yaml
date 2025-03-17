@@ -35,6 +35,9 @@ importers:
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource-variable/noto-naskh-arabic':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@r4ai/remark-callout':
         specifier: ^0.6.2
         version: 0.6.2
@@ -688,6 +691,9 @@ packages:
 
   '@fontsource-variable/jetbrains-mono@5.2.5':
     resolution: {integrity: sha512-G3sN1xq1moZd0JL+hFaA4MEdsiQS+JXC/z7m+EqA5/Fzn5CQlXGUaaNKFGQdDsFuLTnCfW0KOOSWHjygNfjEPw==}
+
+  '@fontsource-variable/noto-naskh-arabic@5.2.5':
+    resolution: {integrity: sha512-kWoxZIZmSAoi2/0TY0VwlDmqd0hr955eObXN1FL06A/PlFhNJKX1OBlTt988IGPQluSGDBh+KvmzOgAj6xdajg==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -3354,6 +3360,8 @@ snapshots:
     optional: true
 
   '@fontsource-variable/jetbrains-mono@5.2.5': {}
+
+  '@fontsource-variable/noto-naskh-arabic@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

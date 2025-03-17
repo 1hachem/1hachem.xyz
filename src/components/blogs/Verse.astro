@@ -1,0 +1,35 @@
+---
+import Quran from "@/assets/quran.json";
+import CalloutBody from "./CalloutBody.astro";
+import CalloutTitle from "./CalloutTitle.astro";
+import "@fontsource-variable/noto-naskh-arabic";
+
+interface Props {
+  surahNumber: number;
+  verseNumber: number;
+}
+
+type QuranType = {
+  surah_number: number;
+  verse_number: number;
+  content: string;
+}[];
+
+Quran as QuranType;
+
+const { surahNumber, verseNumber } = Astro.props;
+
+const verse = Quran.find(
+  (verse) =>
+    verse.surah_number == surahNumber && verse.verse_number == verseNumber,
+);
+---
+
+<CalloutTitle calloutType="verse">
+  verse {verse?.verse_number} surah {verse?.surah_number}
+</CalloutTitle>
+<CalloutBody>
+  <p class="font-arabic text-lg">
+    {verse?.content}
+  </p>
+</CalloutBody>
