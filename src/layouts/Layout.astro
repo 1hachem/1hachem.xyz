@@ -1,14 +1,16 @@
 ---
-interface Props {
-  title?: string;
-  description?: string;
-}
+import ClickSpark from "@/components/ClickSpark";
+import Navbar from "@/components/NavBar.astro";
 
-import Navbar from "../components/NavBar.astro";
 import "@/styles/global.css";
 import Footer from "../components/Footer.astro";
 import { ClientRouter, fade } from "astro:transitions";
 import "@fontsource-variable/jetbrains-mono";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
 
 const title = (Astro.props as Props).title || "1hachem.xyz";
 const description =
@@ -26,11 +28,20 @@ const description =
     {description && <meta name="description" content={description} />}
     <ClientRouter />
   </head>
-  <body class="bg-background flex min-h-screen flex-col font-jet text-white">
-    <Navbar />
-    <div class="min-h-screen" transition:animate={fade({ duration: "0.3s" })}>
-      <slot />
-    </div>
-    <Footer />
+  <body class="flex min-h-screen flex-col bg-background font-jet text-white">
+    <ClickSpark
+      sparkColor="#DAE3E5"
+      sparkSize={10}
+      sparkRadius={15}
+      sparkCount={5}
+      duration={300}
+      client:only
+    >
+      <Navbar />
+      <div class="min-h-screen" transition:animate={fade({ duration: "0.3s" })}>
+        <slot />
+      </div>
+      <Footer />
+    </ClickSpark>
   </body>
 </html>
