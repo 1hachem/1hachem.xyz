@@ -1,4 +1,10 @@
 ---
+import Layout from "@/layouts/Layout.astro";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import TOC from "@/components/blogs/TOC.astro";
+import type { MarkdownHeading } from "astro";
+
 interface Props {
   lastModified: Date;
   title: string;
@@ -6,12 +12,6 @@ interface Props {
   minutesRead: string;
   headings: MarkdownHeading[];
 }
-
-import Layout from "@/layouts/Layout.astro";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import TOC from "@/components/TOC.astro";
-import type { MarkdownHeading } from "astro";
 
 dayjs.extend(utc);
 
@@ -25,6 +25,7 @@ const { headings, minutesRead, title, description } = Astro.props;
 <Layout title={title} description={description}>
   <div class="mb-10 flex">
     <main class="mx-auto flex max-w-[90%] flex-col md:max-w-[50%]">
+      <a href="/blogs/all">{"<- back to blogs"}</a>
       <section class="py-10">
         <h1 class="text-4xl font-bold">{title}</h1>
         <p class="text-sm">{minutesRead}</p>

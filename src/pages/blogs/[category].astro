@@ -1,0 +1,45 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { TAGS } from "@/consts";
+import { undefined } from "astro:schema";
+import BlogsGrid from "@/components/blogs/BlogsGrid.astro";
+
+export function getStaticPaths() {
+  return TAGS.map((tag) => ({
+    params: {
+      category: tag,
+    },
+  }));
+}
+
+const { category } = Astro.params;
+
+let blogs = (await getCollection("blog")).filter(
+  (blog) => blog.data.tag == category || category == "all",
+);
+---
+
+<PageLayout
+  title="Blogs - 1hachem.xyz"
+  description="Read Hachem Betrouni latest blog posts."
+>
+  <div class="flex flex-col gap-8">
+    <div class="flex flex-col">
+      filter by category:
+      <div class="flex gap-2">
+        {
+          TAGS.map((tag) => (
+            <a
+              href={`/blogs/${tag}`}
+              class={`mt-4 w-fit rounded-lg border p-1 text-xs font-bold ${tag == category ? "underline" : ""}`}
+            >
+              {tag}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <BlogsGrid blogs={blogs} />
+  </div>
+</PageLayout>

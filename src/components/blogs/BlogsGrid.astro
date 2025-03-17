@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+export interface Props {
+  blogs: CollectionEntry<"blog">[];
+}
+
+const { blogs } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+  {
+    blogs.map((blog) => (
+      <li class="h-full w-full list-none rounded-md border p-4 transition-transform duration-300 hover:scale-105">
+        <a
+          href={`/blog/${blog.id}`}
+          data-astro-prefetch
+          class="group hover:no-underline"
+        >
+          <div class="flex h-full flex-col justify-between">
+            <h1 class="text-xl font-semibold">{blog.data.title}</h1>
+            <p class="mt-2">{blog.data.description}</p>
+            <div class="mt-4 w-fit rounded-lg border p-1 text-xs font-bold">
+              {blog.data.tag}
+            </div>
+          </div>
+        </a>
+      </li>
+    ))
+  }
+</div>
