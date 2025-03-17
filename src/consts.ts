@@ -2,6 +2,6 @@ export const TAGS = [
   "all",
   "lifestyle",
   "dev",
-  "relegion",
+  "religion",
   "management",
 ] as const;

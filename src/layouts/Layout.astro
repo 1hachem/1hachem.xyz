@@ -14,9 +14,10 @@ interface Props {
 const title = (Astro.props as Props).title || "1hachem.xyz";
 const description =
   (Astro.props as Props).description || "Hachem Betrouni personal website";
+import { ClientRouter } from "astro:transitions";
 ---
 
-<html transition:name="root" transition:animate="none">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -24,6 +25,7 @@ const description =
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title || "1hachem.xyz"}</title>
+    <ClientRouter />
     {description && <meta name="description" content={description} />}
   </head>
   <body class="flex min-h-screen flex-col bg-background font-jet text-white">
@@ -35,11 +37,11 @@ const description =
       duration={300}
       client:only
     >
-      <Navbar />
+      <Navbar transition:persist />
       <div class="min-h-screen">
         <slot />
       </div>
-      <Footer />
+      <Footer transition:persist />
     </ClickSpark>
   </body>
 </html>

@@ -24,7 +24,7 @@ let blogs = (await getCollection("blog")).filter(
   description="Read Hachem Betrouni latest blog posts."
 >
   <div class="flex flex-col gap-8">
-    <div class="flex flex-col">
+    <div class="flex flex-col" transition:persist>
       filter by category:
       <div class="flex gap-2">
         {
