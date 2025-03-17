@@ -11,6 +11,7 @@ node_modules/
 # Astro build output
 dist/
 .astro/
+.vercel/
 
 # Test output
 coverage/
