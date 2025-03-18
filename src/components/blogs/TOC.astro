@@ -9,7 +9,7 @@ const { headings } = Astro.props;
 const toc = headings.filter((heading) => heading.depth == 2);
 ---
 
-<nav class="sticky top-1 pr-2 pt-10">
+{toc.length > 0 ? <nav class="sticky top-1 pr-2 pt-10">
   <h1 class="text-xl font-bold">Table of contents</h1>
   <ol class="list-decimal">
     {
@@ -22,4 +22,4 @@ const toc = headings.filter((heading) => heading.depth == 2);
       ))
     }
   </ol>
-</nav>
+</nav> : <></>}
