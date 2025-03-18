@@ -20,9 +20,7 @@ const { blogs } = Astro.props;
           <div class="flex h-full flex-col justify-between">
             <h1 class="text-xl font-semibold">{blog.data.title}</h1>
             <p class="mt-2">{blog.data.description}</p>
-            <div class="mt-4 w-fit rounded-lg border p-1 text-xs font-bold">
-              {blog.data.tag}
-            </div>
+            <div class="mt-4 text-xs font-bold">#{blog.data.tag}</div>
           </div>
         </a>
       </li>
