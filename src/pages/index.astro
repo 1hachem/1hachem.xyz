@@ -1,9 +1,9 @@
 ---
-import { Image } from "astro:assets";
-import ProfileImage from "@/assets/me.png";
 import PageLayout from "@/layouts/PageLayout.astro";
 import Activity from "@/components/Activity.astro";
-import { GitHubLogo } from "@astropub/icons";
+import About from "@/components/About.astro";
+import Uses from "@/components/Uses.astro";
+import LatestBlogs from "@/components/LatestBlogs.astro";
 ---
 
 <PageLayout
@@ -12,58 +12,9 @@ import { GitHubLogo } from "@astropub/icons";
 >
   <div class="flex flex-col gap-10">
     <h1 class="text-2xl">Salam alikom, It's Hachem</h1>
-
-    <div class="text-l flex flex-row items-center gap-4">
-      <Image class="w-32" src={ProfileImage} alt={"Me smiling"} />
-      <div>
-        I'm currently working as CTO at
-        <a href="https://big-mama.io" class="text-primary">BIGmama</a>,
-        <br />
-        an AI hatchery that combines human expertise into AI software.
-        <br />
-        Currently I lead the development of
-        <a href="https://hyko.ai/" class="text-primary">Hyko</a> - an AI workflow
-        builder
-      </div>
-    </div>
-    <div>
-      <h3 class="text-lg font-bold">Technologies I Use</h3>
-      <p>
-        Python, TypeScript, FastAPI, MongoDB, Docker, Kubernetes, Redis,
-        Next.js, Astro.js, VIM, GIT, Tailwindcss
-      </p>
-    </div>
-    <div>
-      <h3 class="text-lg font-bold">Tools I love</h3>
-      <p>zeditor, lazygit, obsidian, rofi, posthog, zsh, tailscale, github</p>
-    </div>
-    <div>
-      <h3 class="text-lg font-bold">Fun Facts About Me</h3>
-      <ul>
-        <li>Husband and father</li>
-        <li>Never owned a smartphone</li>
-        <li>Hate social media facebook, linkedin, X, you name it</li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-8">
-      <h3
-        class="flex items-center justify-center gap-2 text-center text-sm font-bold"
-      >
-        Going to flex my github activity here
-      </h3>
-      <Activity />
-      <div class="flex justify-end">
-        <a
-          href="https://github.com/1hachem"
-          class="flex items-center gap-2 hover:underline"
-          target="_blank"
-        >
-          @1hachem
-          <div class="w-5">
-            <GitHubLogo />
-          </div>
-        </a>
-      </div>
-    </div>
+    <About />
+    <LatestBlogs />
+    <Uses />
+    <Activity />
   </div>
 </PageLayout>

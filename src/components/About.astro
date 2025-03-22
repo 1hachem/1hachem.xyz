@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import ProfileImage from "@/assets/me.png";
+---
+
+<div class="text-l flex flex-row items-center gap-4">
+  <Image class="w-32" src={ProfileImage} alt={"Me smiling"} />
+  <div>
+    I'm currently working as CTO at
+    <a href="https://big-mama.io" class="text-primary">BIGmama</a>,
+    <br />
+    an AI hatchery that combines human expertise into AI software.
+    <br />
+    Currently I lead the development of
+    <a href="https://hyko.ai/" class="text-primary">Hyko</a> - an AI workflow builder
+  </div>
+</div>
