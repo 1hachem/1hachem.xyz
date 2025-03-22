@@ -1,4 +1,5 @@
 ---
+import { GitHubLogo } from "@astropub/icons";
 import { ActivityCalendar, type ThemeInput } from "react-activity-calendar";
 
 export type Activity = {
@@ -28,15 +29,33 @@ const gitHubTheme = {
 } satisfies ThemeInput;
 
 const defaultLabels = {
-  totalCount:
-    "{{count}} contributions in the last year (hope my wife won't see this)",
+  totalCount: "{{count}} contributions in the last year",
 };
 ---
 
-<ActivityCalendar
-  data={data.contributions}
-  theme={gitHubTheme}
-  maxLevel={4}
-  labels={defaultLabels}
-  colorScheme="dark"
-/>
+<div class="flex flex-col gap-8">
+  <h3
+    class="flex items-center justify-center gap-2 text-center text-sm font-bold"
+  >
+    Going to flex my github activity here
+  </h3>
+  <ActivityCalendar
+    data={data.contributions}
+    theme={gitHubTheme}
+    maxLevel={4}
+    labels={defaultLabels}
+    colorScheme="dark"
+  />
+  <div class="flex justify-end">
+    <a
+      href="https://github.com/1hachem"
+      class="flex items-center gap-2 hover:underline"
+      target="_blank"
+    >
+      @1hachem
+      <div class="w-5">
+        <GitHubLogo />
+      </div>
+    </a>
+  </div>
+</div>
