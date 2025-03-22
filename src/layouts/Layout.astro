@@ -112,11 +112,13 @@ const structuredData = {
       duration={300}
       client:only
     >
-      <Navbar transition:persist />
-      <div class="min-h-screen">
-        <slot />
+      <div class="flex min-h-screen flex-col justify-between">
+        <nav class="absolute left-6 top-6"><a href="/">1hachem.xyz</a></nav>
+        <div class="mt-20 items-center">
+          <slot />
+        </div>
+        <Footer transition:persist />
       </div>
-      <Footer transition:persist />
     </ClickSpark>
   </body>
 </html>
