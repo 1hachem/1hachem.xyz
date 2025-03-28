@@ -2,6 +2,7 @@
 import Quran from "@/assets/quran.json";
 import CalloutBody from "./CalloutBody.astro";
 import CalloutTitle from "./CalloutTitle.astro";
+import Callout from "./Callout.astro";
 import "@fontsource-variable/noto-naskh-arabic";
 
 interface Props {
@@ -25,11 +26,13 @@ const verse = Quran.find(
 );
 ---
 
-<CalloutTitle calloutType="verse">
-  verse {verse?.verse_number} surah {verse?.surah_number}
-</CalloutTitle>
-<CalloutBody>
-  <p class="font-arabic text-lg" dir="rtl">
-    {verse?.content}
-  </p>
-</CalloutBody>
+<Callout>
+  <CalloutTitle calloutType="verse">
+    verse {verse?.verse_number} surah {verse?.surah_number}
+  </CalloutTitle>
+  <CalloutBody>
+    <p class="font-arabic text-lg" dir="rtl">
+      {verse?.content}
+    </p>
+  </CalloutBody>
+</Callout>
