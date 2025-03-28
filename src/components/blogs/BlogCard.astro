@@ -11,14 +11,12 @@ export interface Props {
 const { id, title, description, tag } = Astro.props;
 ---
 
-<li
-  class="border-foreground h-full w-full list-none rounded-md border p-4 transition-transform duration-300 hover:scale-105"
->
+<li class="list-none">
   <a href={`/blog/${id}`} data-astro-prefetch class="group hover:no-underline">
-    <div class="flex h-full flex-col justify-between">
-      <h1 class="text-xl font-semibold">{title}</h1>
-      <p class="mt-2">{description}</p>
-      <div class="mt-4 text-xs font-bold">#{tag}</div>
+    <div class="flex flex-col">
+      <h1 class="text-xl font-semibold hover:underline">&gt; {title}</h1>
+      <p>{description}</p>
+      <div class="mt-2 text-xs font-bold">#{tag}</div>
     </div>
   </a>
 </li>
