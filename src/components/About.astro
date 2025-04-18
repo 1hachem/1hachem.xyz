@@ -4,7 +4,11 @@ import ProfileImage from "@/assets/me.png";
 ---
 
 <div class="text-l flex flex-row items-center gap-4">
-  <Image class="w-32" src={ProfileImage} alt={"Me smiling"} />
+  <Image
+    class="hidden w-32 rounded-full border-2 lg:block"
+    src={ProfileImage}
+    alt={"Me smiling"}
+  />
   <div>
     I'm currently working as CTO at
     <a href="https://big-mama.io" class="text-primary">BIGmama</a>,
