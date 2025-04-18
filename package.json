@@ -17,9 +17,10 @@
     "@astrojs/ts-plugin": "^1.10.4",
     "@astrojs/vercel": "^8.1.2",
     "@astropub/icons": "^0.2.0",
-    "@fontsource-variable/jetbrains-mono": "^5.2.5",
-    "@fontsource-variable/noto-naskh-arabic": "^5.2.5",
+    "@fontsource/noto-naskh-arabic": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5",
     "@r4ai/remark-callout": "^0.6.2",
+    "@tailwindcss/vite": "^4.1.4",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "astro": "^5.0.3",
@@ -30,7 +31,7 @@
     "react-dom": "^19.0.0",
     "reading-time": "^1.5.0",
     "sharp": "^0.33.5",
-    "tailwindcss": "^3.4.16"
+    "tailwindcss": "^4.1.4"
   },
   "packageManager": "pnpm@8.10.2+sha512.0782093d5ba6c7ad9462081bc1ef0775016a4b4109eca1e1fedcea6f110143af5f50993db36c427d4fa8c62be3920a3224db12da719d246ca19dd9f18048c33c",
   "devDependencies": {

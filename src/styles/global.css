@@ -1,9 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
 
 @layer base {
   a {
     @apply hover:underline;
   }
+}
+
+@theme {
+  --color-background: #04080f;
+  --color-primary: #507dbc;
+  --color-secondary: #a1c6ea;
+  --color-pale: #bbd1ea;
+  --color-white: #dae3e5;
+}
+
+html {
+  @apply scroll-smooth;
+  font-family: JetBrains Mono;
+}
+
+.arabic {
+  font-family: Noto Naskh Arabic;
 }

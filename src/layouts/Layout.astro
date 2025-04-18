@@ -1,13 +1,13 @@
 ---
 import "@/styles/global.css";
-import "@fontsource-variable/jetbrains-mono";
 import { ClientRouter } from "astro:transitions";
+
+import "@fontsource/jetbrains-mono/400.css";
 
 import { SITE } from "@/consts";
 
 import Footer from "@/components/Footer.astro";
 import ClickSpark from "@/components/ClickSpark";
-import Navbar from "@/components/NavBar.astro";
 
 interface Props {
   title?: string;
@@ -115,7 +115,7 @@ const structuredData = {
       client:only
     >
       <div class="flex min-h-screen flex-col justify-between">
-        <nav class="absolute left-6 top-6"><a href="/">1hachem.xyz</a></nav>
+        <nav class="absolute top-6 left-6"><a href="/">1hachem.xyz</a></nav>
         <div class="mt-20 items-center">
           <slot />
         </div>

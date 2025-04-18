@@ -7,7 +7,7 @@ type Props = {
 const { calloutType } = Astro.props;
 ---
 
-<div class="flex items-center gap-2 rounded-t-lg px-4 py-2 text-sm">
+<div class="text-md flex items-center gap-2 rounded-t-lg px-4 py-2">
   <div class="w-4">
     {calloutType === "note" && <p>💡</p>}
     {calloutType === "todo" && <p>✔️</p>}
